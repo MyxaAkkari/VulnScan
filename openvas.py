@@ -6,7 +6,7 @@ from lxml import etree
 import csv
 import xlsxwriter
 from fpdf import FPDF
-from config import Config
+
 
 class OpenVASScanner:
     def __init__(self, socket_path, username, password):
@@ -24,43 +24,28 @@ class OpenVASScanner:
             gmp.authenticate(self.username, self.password)
             print("Authenticated successfully")
 
-    def create_target(self, name, hosts, port_range= None, port_list_id = None):
+    def create_target(self, name, hosts, port_range=None, port_list_id=None):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
-            # Use the library methods to create a target
-            response = gmp.create_target(name=name, hosts=[hosts], port_range=port_range, port_list_id= port_list_id)
             
-            # Print the full response to understand its structure
-            # print("Create Target Response:")
-            # print(dir(response))
-
-            # Check for errors or messages in the response
-            if response.xpath('//status/text()'):
-                status = response.xpath('//status/text()')[0]
-                print(f"Response Status: {status}")
-            if response.xpath('//message/text()'):
-                message = response.xpath('//message/text()')[0]
-                print(f"Response Message: {message}")
-
-            # Extract the target ID from the response
+            # Create the target using the provided details
+            response = gmp.create_target(name=name, hosts=[hosts], port_range=port_range, port_list_id=port_list_id)
+            
+            # Extract target ID from the response
             target_id_elements = response.xpath('@id')
             if not target_id_elements:
-                raise ValueError("Failed to retrieve target ID")
+                # Check for detailed error information
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                if status and status_text:
+                    raise ValueError(f"Error {status}: {status_text}")
+                else:
+                    raise ValueError("Failed to retrieve target ID and no detailed error information available.")
 
             target_id = target_id_elements[0]
-            print(f"Target created with ID: {target_id}")
             return target_id
 
-    def get_targets(self):
-        with self._connect() as gmp:
-            gmp.authenticate(self.username, self.password)
 
-            # Set a filter with a large number for rows to ensure all targets are retrieved
-            response = gmp.get_targets(filter_string='rows=-1')  # '-1' should retrieve all rows
-
-            # Parse the targets from the response
-            targets = response.xpath('.//target')
-            return targets
 
 
     def get_configs(self):
@@ -68,91 +53,93 @@ class OpenVASScanner:
             gmp.authenticate(self.username, self.password)
             response = gmp.get_scan_configs()
             configs = response.xpath('.//config')
+            if not configs:
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                if status and status_text:
+                    raise ValueError(f"Error {status}: {status_text}")
+                else:
+                    raise ValueError("Failed to retrieve scan configurations")
             return configs
 
-    def get_filters(self):
-        with self._connect() as gmp:
-            gmp.authenticate(self.username, self.password)
-            response = gmp.get_filters()
-            raw_xml = etree.tostring(response, pretty_print=True).decode()
-            return raw_xml
 
     def get_hosts(self):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
-            
-            # Get the list of hosts
-            response = gmp.get_hosts()
-            
-            # Convert the raw response to a string and print it
-            # raw_xml = etree.tostring(response, pretty_print=True).decode()
-            # print("Raw XML Response:")
-            # print(raw_xml)
-            
-            # Process the XML to extract hosts data
+            response = gmp.get_hosts(filter_string="rows=-1")
+            if response.attrib.get('status') == '400':
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
+                
             hosts = []
             for asset in response.xpath('//asset'):
                 host_data = {}
-                
-                # Extract identifiers
                 for identifier in asset.xpath('identifiers/identifier'):
                     name = identifier.xpath('name/text()')[0] if identifier.xpath('name/text()') else None
                     value = identifier.xpath('value/text()')[0] if identifier.xpath('value/text()') else None
                     if name and value:
                         host_data[name] = value
-                
                 hosts.append(host_data)
             
             return hosts
 
 
 
-    def list_scanners(self):
+    def get_scanners(self):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
             response = gmp.get_scanners()
-            scanners = response.xpath('.//scanner')
+            if response.attrib.get('status') == '400':
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
             
+            scanners = response.xpath('.//scanner')
             available_scanners = []
             for scanner in scanners:
                 scanner_id = scanner.xpath('@id')[0]
                 scanner_name = scanner.xpath('name/text()')[0]
-                # print(f"Scanner ID: {scanner_id}, Name: {scanner_name}")
                 available_scanners.append((scanner_id, scanner_name))
             
             return available_scanners
         
 
     def get_portlists(self):
-            with self._connect() as gmp:
-                gmp.authenticate(self.username, self.password)
-                response = gmp.get_port_lists()  # Use the method to get port lists
-                
-                portlists = response.xpath('.//port_list')  # Extract port list elements
-                portlist_data = []
-                
-                for portlist in portlists:
-                    portlist_entry = {
-                        "id": portlist.xpath('@id')[0] if portlist.xpath('@id') else "N/A",
-                        "name": portlist.xpath('name/text()')[0] if portlist.xpath('name/text()') else "N/A",
-                        "comment": portlist.xpath('comment/text()')[0] if portlist.xpath('comment/text()') else "No comment"
-                    }
-                    portlist_data.append(portlist_entry)
-                
-                return portlist_data
-
-
-
-    def create_task(self, name, target_id, config_id, scanner_id):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
+            response = gmp.get_port_lists()
+            if response.attrib.get('status') == '400':
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
             
-            # Create the task with the selected scanner ID
-            response = gmp.create_task(name=name, target_id=target_id, config_id=config_id, scanner_id=scanner_id)
+            portlists = response.xpath('.//port_list')
+            portlist_data = []
+            for portlist in portlists:
+                portlist_entry = {
+                    "id": portlist.xpath('@id')[0] if portlist.xpath('@id') else "N/A",
+                    "name": portlist.xpath('name/text()')[0] if portlist.xpath('name/text()') else "N/A",
+                    "comment": portlist.xpath('comment/text()')[0] if portlist.xpath('comment/text()') else "No comment"
+                }
+                portlist_data.append(portlist_entry)
+            
+            return portlist_data
+
+
+
+    def create_task(self, name, target_id, config_id, scanner_id, schedule_id=None):
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            response = gmp.create_task(name=name, target_id=target_id, config_id=config_id, scanner_id=scanner_id, schedule_id=schedule_id)
             task_id = response.xpath('@id')
             if not task_id:
-                raise ValueError("Failed to create task or retrieve task ID")
-            # print(f"Task created with ID: {task_id[0]}")
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                if status and status_text:
+                    raise ValueError(f"Error {status}: {status_text}")
+                else:
+                    raise ValueError("Failed to create task or retrieve task ID")
             return task_id[0]
 
 
@@ -160,15 +147,11 @@ class OpenVASScanner:
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
             response = gmp.start_task(task_id=task_id)
-            
-            # Extract the status and any other relevant information
-            status = response.xpath('.//status/text()')[0] if response.xpath('.//status/text()') else "unknown"
-            message = response.xpath('.//message/text()')[0] if response.xpath('.//message/text()') else "No message"
-            
-            # Return as a dictionary
+            status = response.attrib.get('status') if response.attrib.get('status') else "unknown"
+            status_text = response.attrib.get('status_text') if response.attrib.get('status_text') else "No message"
             return {
                 "status": status,
-                "message": message
+                "status_text": status_text
             }
 
 
@@ -176,11 +159,14 @@ class OpenVASScanner:
     def get_tasks(self):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
-            response = gmp.get_tasks()  # Fetch the tasks from OpenVAS
+            response = gmp.get_tasks()
+            if response.attrib.get('status') == '400':
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
             
-            tasks = response.xpath('.//task')  # Extract task elements
+            tasks = response.xpath('.//task')
             task_list = []
-            
             for task in tasks:
                 task_entry = {
                     "id": task.xpath('@id')[0] if task.xpath('@id') else "N/A",
@@ -196,20 +182,17 @@ class OpenVASScanner:
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
             response = gmp.get_task(task_id=task_id)
-            
-            # Extract the status, handle cases where the element might not be present
+            status = response.attrib.get('status')
+            status_text = response.attrib.get('status_text')
             status_elements = response.xpath('.//status/text()')
-            status = status_elements[0] if status_elements else "unknown"
-            
-            message_elements = response.xpath('.//message/text()')
-            message = message_elements[0] if message_elements else "No message"
+            progress = status_elements[0] if status_elements else "unknown"
             # raw_xml = etree.tostring(response, pretty_print=True).decode()
             # print("Raw XML Response:")
             # print(raw_xml)
-            # Return as a dictionary
             return {
                 "status": status,
-                "message": message
+                "message": status_text,
+                "progress": progress
             }
 
 
@@ -217,10 +200,13 @@ class OpenVASScanner:
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
             response = gmp.get_results(task_id=task_id)
+            if response.attrib.get('status') == '400':
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
             
             results = response.xpath('.//result')
             result_list = []
-            
             for result in results:
                 result_entry = {
                     "id": result.xpath('@id')[0] if result.xpath('@id') else "N/A",
@@ -232,22 +218,27 @@ class OpenVASScanner:
             
             return result_list
 
-    def get_reports(self):
+    def get_results(self, task_id):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
-            response = gmp.get_reports()  # Fetch the reports
-            reports = response.xpath('.//report')  # Extract report elements
-            report_list = []
+            response = gmp.get_results(task_id=task_id)
+            if response.attrib.get('status') == '400':
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
             
-            for report in reports:
-                report_entry = {
-                    "id": report.xpath('@id')[0] if report.xpath('@id') else "N/A",
-                    "name": report.xpath('name/text()')[0] if report.xpath('name/text()') else "N/A",
-                    "status": report.xpath('status/text()')[0] if report.xpath('status/text()') else "N/A"
+            results = response.xpath('.//result')
+            result_list = []
+            for result in results:
+                result_entry = {
+                    "id": result.xpath('@id')[0] if result.xpath('@id') else "N/A",
+                    "name": result.xpath('name/text()')[0] if result.xpath('name/text()') else "N/A",
+                    "description": result.xpath('description/text()')[0] if result.xpath('description/text()') else "N/A",
+                    "severity": result.xpath('severity/text()')[0] if result.xpath('severity/text()') else "N/A"
                 }
-                report_list.append(report_entry)
+                result_list.append(result_entry)
             
-            return report_list
+            return result_list
 
     def get_report_by_id(self, report_id):
         with self._connect() as gmp:
@@ -311,7 +302,9 @@ class OpenVASScanner:
                 # Return formatted report data
                 return report_data
             else:
-                return {"error": "Report not found"}
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
 
 
     def export_report_to_csv(self, report_data, filename):
@@ -366,21 +359,63 @@ class OpenVASScanner:
 
         pdf.output(filename)
         return filename
+    
+
+    def create_schedule(self, name, icalendar_data, timezone='UTC', comment=None):
+        """
+        Create a new schedule in OpenVAS.
+
+        :param name: The name of the schedule.
+        :param icalendar_data: The iCalendar data for the schedule.
+        :param timezone: The timezone for the schedule. Default is 'UTC'.
+        :param comment: Optional comment for the schedule.
+        :return: The ID of the created schedule.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+
+            # Use GMP's create_schedule method
+            response = gmp.create_schedule(
+                name=name,
+                icalendar=icalendar_data,
+                timezone=timezone,
+                comment=comment
+            )
+            
+            # Extract the schedule ID from the response
+            schedule_id = response.xpath('//create_schedule_response/@id')[0]
+            
+            return schedule_id
 
 
-# Example usage
-# if __name__ == "__main__":
-#     scanner = OpenVASScanner(socket_path="/var/run/gvmd/gvmd.sock", username="admin", password="admin123")
-#     scanner.authenticate()
-#     scanners = scanner.list_scanners()
+    def get_schedules(self, filter_string='rows=-1'):
+        """
+        Retrieve a list of all schedules from OpenVAS using GMP.
 
-#     # Assume the user chooses the first scanner
-#     chosen_scanner_id = scanners[1][0]  # The user can choose a different scanner here
+        :param filter_string: Optional filter string to customize the query.
+                            Default is 'rows=-1', which retrieves all schedules.
+        :return: A list of schedules, each represented as a dictionary.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            response = gmp.get_schedules(filter_string=filter_string)
 
-#     target_id = scanner.create_target(name="DNS_server", hosts=["192.168.1.84"], port_range="T:1-65535")
-#     configs = scanner.get_configs()
-#     config_id = configs[0].xpath('@id')[0]  # Use the first config ID for simplicity
-#     task_id = scanner.create_task(name="My Scan Task", target_id=target_id, config_id=config_id, scanner_id=chosen_scanner_id)
-#     scanner.start_task(task_id=task_id)
-#     scanner.get_task_status(task_id=task_id)
-#     results = scanner.get_results(task_id=task_id)
+            # Parse the response to extract schedule data
+            schedules = []
+            for schedule in response.xpath('//schedule'):
+                schedule_data = {
+                    'id': schedule.get('id'),
+                    'name': schedule.findtext('name'),
+                    'comment': schedule.findtext('comment'),
+                    'timezone': schedule.findtext('timezone'),
+                    'duration': schedule.findtext('duration'),
+                    'period': schedule.findtext('period'),
+                    'next_time': schedule.findtext('next_time'),
+                    'last_time': schedule.findtext('last_time'),
+                    'owner': schedule.findtext('owner'),
+                    'creation_time': schedule.findtext('creation_time'),
+                    'modification_time': schedule.findtext('modification_time'),
+                }
+                schedules.append(schedule_data)
+
+            return schedules

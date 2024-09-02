@@ -1,6 +1,9 @@
 from flask import jsonify, request, Blueprint, send_file
 from openvas import OpenVASScanner
 from config import Config
+from icalendar import Calendar, Event
+from datetime import datetime
+import pytz
 
 scanner_bp = Blueprint('scanner_bp', __name__)
 scanner = OpenVASScanner(socket_path = Config.OPENVAS_SOCKET_PATH, username = Config.OPENVAS_USERNAME, password = Config.OPENVAS_PASSWORD)
@@ -10,20 +13,21 @@ def authenticate():
     try:
         scanner.authenticate()
         return jsonify({"message": "Authenticated successfully"}), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+    except ValueError as e:
+            # Return the detailed error message
+            return jsonify({"error": str(e)}), 500
 
-@scanner_bp.route('/list_scanners', methods=['GET'])
-def list_scanners():
+@scanner_bp.route('/get_scanners', methods=['GET'])
+def get_scanners():
     try:
-        scanners = scanner.list_scanners()
+        scanners = scanner.get_scanners()
         return jsonify(scanners), 200
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
     
 
-@scanner_bp.route('/list_configs', methods=['GET'])
-def list_configs():
+@scanner_bp.route('/get_configs', methods=['GET'])
+def get_configs():
     try:
         configs = scanner.get_configs()
         config_list = []
@@ -32,11 +36,11 @@ def list_configs():
             config_name = config.xpath('name/text()')[0]
             config_list.append({"config_id": config_id, "config_name": config_name})
         return jsonify(config_list), 200
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
-@scanner_bp.route('/list_targets', methods=['GET'])
-def list_targets():
+@scanner_bp.route('/get_targets', methods=['GET'])
+def get_targets():
     try:
         targets = scanner.get_targets()
         target_list = []
@@ -45,33 +49,25 @@ def list_targets():
             target_name = target.xpath('name/text()')[0]
             target_list.append({"target_id": target_id, "target_name": target_name})
         return jsonify(target_list), 200
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
-
-@scanner_bp.route('/get_filters', methods=['GET'])
-def get_filters():
-    try:
-        filters = scanner.get_filters()
-        return jsonify({"filters": filters}), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
 
 @scanner_bp.route('/get_portlists', methods=['GET'])
 def get_portlists():
     try:
         portlists = scanner.get_portlists()
         return jsonify({"portlists": portlists}), 200
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
 
-@scanner_bp.route('/hosts', methods=['GET'])
+@scanner_bp.route('/get_hosts', methods=['GET'])
 def get_hosts():
     try:
         hosts = scanner.get_hosts()
         return jsonify({"hosts": hosts}), 200
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
 
@@ -84,6 +80,10 @@ def convert_hosts_to_targets():
     
     created_targets = []
 
+    # Fetch existing targets
+    existing_targets = scanner.get_targets()
+    existing_target_names = {target.findtext('name') for target in existing_targets}
+
     for host in hosts:
         # Extract hostname and IP
         hostname = host.get('hostname')
@@ -95,42 +95,21 @@ def convert_hosts_to_targets():
         # Use hostname if available, otherwise use IP as the target name
         target_name = hostname if hostname else ip
 
+        # Skip creating the target if it already exists
+        if target_name in existing_target_names:
+            continue
+
         try:
             # Create target with the extracted name and IP
             target_id = scanner.create_target(name=target_name, hosts=ip, port_list_id=port_list_id, port_range=port_range)
             created_targets.append({"target_name": target_name, "target_id": target_id})
-        except Exception as e:
+        except ValueError as e:
+            # Return the detailed error message
             return jsonify({"error": str(e)}), 500
 
     return jsonify({"created_targets": created_targets}), 201
 
 
-
-@scanner_bp.route('/discover_hosts', methods=['POST'])
-def discover_hosts():
-    data = request.json
-    network = data.get('network', '192.168.14.0/24')  # Default to a common local network range
-    port_list_id= data.get('port_list_id')
-    # You can use the known Host Discovery config ID directly
-    host_discovery_config_id = '2d3f051c-55ba-11e3-bf43-406186ea4fc5'
-    
-    try:
-        # Create a target for the network/subnet
-        target_id = scanner.create_target(name="Host Discovery Target", hosts=[network], port_list_id=port_list_id)
-        
-        # Fetch the list of available scanners
-        scanners = scanner.list_scanners()
-        chosen_scanner_id = scanners[1][0]  # Select the first available scanner, or prompt the user to choose
-        
-        # Create a task for host discovery
-        task_id = scanner.create_task(name="Host Discovery Task", target_id=target_id, config_id=host_discovery_config_id, scanner_id=chosen_scanner_id)
-        
-        # Start the host discovery task
-        response = scanner.start_task(task_id=task_id)
-        return jsonify(response), 200
-    
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
 
 
 @scanner_bp.route('/create_target', methods=['POST'])
@@ -140,13 +119,18 @@ def create_target():
     hosts = data.get('hosts')
     port_range = data.get('port_range')
     port_list_id = data.get('port_list_id')
-    
+
+    if not name or not hosts:
+        return jsonify({"error": "Name and hosts are required."}), 400
+
     try:
         target_id = scanner.create_target(name=name, hosts=hosts, port_range=port_range, port_list_id=port_list_id)
         return jsonify({"target_id": target_id}), 201
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+    except ValueError as e:
+        return jsonify({"error": "An unexpected error occurred."}), 500
+    
 
 @scanner_bp.route('/create_task', methods=['POST'])
 def create_task():
@@ -155,11 +139,12 @@ def create_task():
     target_id = data.get('target_id')
     config_id = data.get('config_id')
     scanner_id = data.get('scanner_id')
+    schedule_id = data.get('schedule_id', None)
     
     try:
-        task_id = scanner.create_task(name=name, target_id=target_id, config_id=config_id, scanner_id=scanner_id)
+        task_id = scanner.create_task(name=name, target_id=target_id, config_id=config_id, scanner_id=scanner_id, schedule_id = schedule_id)
         return jsonify({"task_id": task_id}), 201
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
 @scanner_bp.route('/start_task', methods=['POST'])
@@ -170,7 +155,7 @@ def start_task():
     try:
         response = scanner.start_task(task_id=task_id)
         return jsonify(response), 200
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
 @scanner_bp.route('/get_task_status', methods=['POST'])
@@ -186,7 +171,7 @@ def get_task_status():
         if response is None:
             return jsonify({"error": "Task not found or no status available."}), 404
         return jsonify(response), 200
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": "Failed to retrieve task status.", "details": str(e)}), 500
 
 
@@ -196,7 +181,7 @@ def get_tasks():
     try:
         tasks = scanner.get_tasks()
         return jsonify({"tasks": tasks}), 200
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
 
@@ -209,7 +194,7 @@ def get_results():
     try:
         results = scanner.get_results(task_id=task_id)
         return jsonify({"results": results}), 200
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
 
@@ -218,7 +203,7 @@ def get_reports():
     try:
         reports = scanner.get_reports()
         return jsonify({"reports": reports}), 200
-    except Exception as e:
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
 
@@ -249,7 +234,61 @@ def export_report(report_id, format):
 
         return send_file(filepath, as_attachment=True)
 
-    except Exception as e:
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 500
+
+@scanner_bp.route('/get_schedules', methods=['GET'])
+def get_schedules():
+    try:
+        schedules = scanner.get_schedules()
+        # Process the schedules if needed. Assuming `schedules` is already in a dictionary format.
+        return jsonify({"schedules": schedules}), 200
+    except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
 
+@scanner_bp.route('/create_schedule', methods=['POST'])
+def create_schedule():
+    data = request.json
+    name = data['name']
+    dtstart = datetime.strptime(data['dtstart'], '%Y-%m-%dT%H:%M:%S')
+    timezone = data.get('timezone', 'UTC')
+    comment = data.get('comment', '')
+    frequency = data.get('frequency', 'daily')  # Default to daily
+    interval = data.get('interval', 1)  # Default interval to 1
+    count = data.get('count')  # Optional: number of occurrences
+
+    # Create the iCalendar data
+    cal = Calendar()
+    cal.add('prodid', '-//VulunScan//')
+    cal.add('version', '2.0')
+
+    event = Event()
+    event.add('dtstamp', datetime.now(tz=pytz.UTC))
+    event.add('dtstart', dtstart)
+
+    # Define recurrence rule based on frequency
+    rrule_params = {
+        'freq': frequency,
+        'interval': interval
+    }
+    if count:
+        rrule_params['count'] = count
+
+    event.add('rrule', rrule_params)
+
+    # Add the event to the calendar
+    cal.add_component(event)
+
+    # Convert the calendar to iCalendar format
+    icalendar_data = cal.to_ical().decode()
+
+    # Create the schedule using the simplified method
+    schedule_id = scanner.create_schedule(
+        name=name,
+        icalendar_data=icalendar_data,
+        timezone=timezone,
+        comment=comment
+    )
+
+    return jsonify({"schedule_id": schedule_id}), 201
