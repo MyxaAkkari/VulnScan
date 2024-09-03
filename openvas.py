@@ -1,4 +1,5 @@
 import re
+from typing import Optional
 from gvm.connections import UnixSocketConnection
 from gvm.protocols.gmp import Gmp
 from gvm.transforms import EtreeTransform
@@ -23,6 +24,232 @@ class OpenVASScanner:
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
             print("Authenticated successfully")
+
+
+
+    def get_roles(self):
+        """
+        Retrieve a list of all roles from OpenVAS.
+
+        :return: A list of dictionaries, each representing a role.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            # Fetch the list of roles
+            response = gmp.get_roles(filter_string="rows=-1")
+            
+            # Handle response
+            if response.attrib.get('status') == '200':
+                # Parse XML response
+                root = etree.fromstring(etree.tostring(response))
+                
+                # Extract role data
+                roles = []
+                for role_element in root.findall('.//role'):
+                    role_data = {
+                        "id": role_element.get('id'),
+                        "name": role_element.findtext('name', default=""),
+                        "description": role_element.findtext('description', default=""),
+                        "permissions": role_element.findtext('permissions', default="").split(','),
+                        "creation_time": role_element.findtext('creation_time', default=""),
+                        "modification_time": role_element.findtext('modification_time', default=""),
+                    }
+                    roles.append(role_data)
+                
+                return roles
+            else:
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
+
+
+    def get_users(self):
+        """
+        Retrieve a list of all users from OpenVAS, including their roles.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            # Fetch the list of users
+            response = gmp.get_users(filter_string="rows=-1")
+
+            # Print the full response to understand its structure
+            # print("Full Users Response:")
+            # print(etree.tostring(response, pretty_print=True).decode())
+
+            # Handle response
+            if response.attrib.get('status') == '200':
+                # Parse XML response
+                root = etree.fromstring(etree.tostring(response))
+
+                # Extract user data
+                users = []
+                for user_element in root.findall('.//user'):
+                    user_id = user_element.get('id')
+                    user_name = user_element.findtext('name', default="")
+                    creation_time = user_element.findtext('creation_time', default="")
+                    modification_time = user_element.findtext('modification_time', default="")
+                    
+                    # Extract roles from user
+                    roles = user_element.findall('.//role')
+                    user_roles = [
+                        {
+                            "id": role.get('id'),
+                            "name": role.findtext('name', default="")
+                        }
+                        for role in roles
+                    ]
+
+                    user_data = {
+                        "id": user_id,
+                        "name": user_name,
+                        "creation_time": creation_time,
+                        "modification_time": modification_time,
+                        "roles": user_roles
+                    }
+                    users.append(user_data)
+
+                return users
+            else:
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
+
+    def get_user(self, user_id):
+        """
+        Retrieve a specific user by ID from OpenVAS.
+
+        :param user_id: ID of the user to retrieve.
+        :return: A dictionary containing user details and roles.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+
+            # Fetch the specific user
+            response = gmp.get_user(user_id=user_id)
+
+
+            # Parse XML response
+            root = etree.fromstring(etree.tostring(response))
+
+            # Extract user data
+            user_element = root.find('.//user[@id="' + user_id + '"]')
+            if user_element is not None:
+                user_data = {
+                    "id": user_element.get('id'),
+                    "name": user_element.findtext('name', default=""),
+                    "creation_time": user_element.findtext('creation_time', default=""),
+                    "modification_time": user_element.findtext('modification_time', default=""),
+                    "roles": []
+                }
+
+                # Extract roles
+                roles_elements = user_element.findall('.//role')
+                for role in roles_elements:
+                    role_data = {
+                        "id": role.get('id'),
+                        "name": role.findtext('name', default="")
+                    }
+                    user_data["roles"].append(role_data)
+
+                # Return formatted user data
+                return user_data
+            else:
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
+
+
+
+    def create_user(self, name, password, role_ids=None):
+        """
+        Create a new user in OpenVAS.
+        
+        :param username: The username of the new user.
+        :param password: The password for the new user.
+        :param roles: A list of roles to assign to the user (optional).
+        :return: A dictionary with the result of the creation.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            # Create the user
+            response = gmp.create_user(name=name, password=password, role_ids=role_ids or [])
+            
+            # Handle response
+            if response.attrib.get('status') == '201':
+                return {"status": "success", "message": "User created successfully"}
+            else:
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
+
+    def modify_user(self, user_id, new_username=None, new_password=None, new_roles=None):
+        """
+        Modify an existing user in OpenVAS.
+        
+        :param user_id: The ID of the user to modify.
+        :param new_username: The new username for the user (optional).
+        :param new_password: The new password for the user (optional).
+        :param new_roles: A list of new roles to assign to the user (optional).
+        :return: A dictionary with the result of the modification.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            # Modify the user
+            response = gmp.modify_user(user_id=user_id, name=new_username, password=new_password, role_ids=new_roles or [])
+            
+            # Handle response
+            if response.attrib.get('status') == '200':
+                return {"status": "success", "message": "User modified successfully"}
+            else:
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
+
+
+    def delete_user(self, user_id):
+        """
+        Delete a user from OpenVAS.
+        
+        :param user_id: The ID of the user to delete.
+        :return: A dictionary with the result of the deletion.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            # Delete the user
+            response = gmp.delete_user(user_id=user_id)
+            
+            # Handle response
+            if response.attrib.get('status') == '200':
+                return {"status": "success", "message": "User deleted successfully"}
+            else:
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                raise ValueError(f"Error {status}: {status_text}")
+
+    def clone_user(self, user_id, name=None, comment=None, roles=None):
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            # Fetch the original user
+            original_user_response = gmp.get_users(filter_string=f"id={user_id}")
+            original_user = original_user_response.find('.//user')
+            
+            if original_user is None:
+                raise ValueError("User not found.")
+            
+            # Prepare clone parameters
+            clone_name = name if name is not None else f"{original_user.findtext('name')}_clone"
+            clone_comment = comment if comment is not None else original_user.findtext('comment', default="")
+            
+            # Clone user
+            gmp.create_user(name=clone_name, comment=clone_comment, roles=roles or [])
+            
+            return {"status": "User cloned successfully", "name": clone_name, "comment": clone_comment}
 
 
 
@@ -211,10 +438,10 @@ class OpenVASScanner:
 
 
 
-    def create_task(self, name, target_id, config_id, scanner_id, schedule_id=None):
+    def create_task(self, name, target_id, config_id, scanner_id, schedule_id=None, alert_ids=None):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
-            response = gmp.create_task(name=name, target_id=target_id, config_id=config_id, scanner_id=scanner_id, schedule_id=schedule_id)
+            response = gmp.create_task(name=name, target_id=target_id, config_id=config_id, scanner_id=scanner_id, schedule_id=schedule_id, alert_ids= alert_ids)
             task_id = response.xpath('@id')
             if not task_id:
                 status = response.attrib.get('status')
@@ -266,14 +493,14 @@ class OpenVASScanner:
                 raise ValueError(f"Error {status}: {status_text}")
 
 
-    def modify_task(self, task_id, name=None, config_id=None, scanner_id=None, schedule_id=None):
+    def modify_task(self, name, task_id, config_id, scanner_id, schedule_id=None, alert_ids=None):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
             
             try:
             
                 # Attempt to modify the task
-                response = gmp.modify_task(task_id=task_id, name=name, config_id=config_id, scanner_id=scanner_id, schedule_id=schedule_id)
+                response = gmp.modify_task(name=name, task_id=task_id, config_id=config_id, scanner_id=scanner_id, schedule_id=schedule_id, alert_ids= alert_ids)
                 
                 # Check if the response contains the updated task information
                 status = response.attrib.get('status')
@@ -298,7 +525,9 @@ class OpenVASScanner:
                 status = response.attrib.get('status')
                 status_text = response.attrib.get('status_text')
                 raise ValueError(f"Error {status}: {status_text}")
-            
+            # raw_xml = etree.tostring(response, pretty_print=True).decode()
+            # print("Raw XML Response:")
+            # print(raw_xml)
             tasks = response.xpath('.//task')
             task_list = []
             for task in tasks:
@@ -311,6 +540,55 @@ class OpenVASScanner:
             
             return task_list
 
+    def get_task(self, task_id: str) -> dict:
+        """
+        Retrieve information about a specific task in OpenVAS using the GMP API.
+
+        Args:
+            task_id: The UUID of the task to retrieve.
+
+        Returns:
+            A dictionary containing the task information from OpenVAS.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            try:
+                response = gmp.get_task(task_id=task_id)
+                raw_xml = etree.tostring(response, pretty_print=True).decode()
+                print("Raw XML Response:")
+                print(raw_xml)
+                
+                # Extract data from the response
+                task = response.find('task')
+                if task is None:
+                    raise ValueError("Failed to get task: Task element not found in response")
+                
+                # Extract task information
+                task_info = {
+                    "status": response.attrib.get('status', 'Unknown'),
+                    "status_text": response.attrib.get('status_text', 'Unknown'),
+                    "id": task.attrib.get('id', 'Unknown'),
+                    "name": task.findtext('name', default="Not available"),
+                    "comment": task.findtext('comment', default="Not available"),
+                    "creation_time": task.findtext('creation_time', default="Not available"),
+                    "modification_time": task.findtext('modification_time', default="Not available"),
+                    "owner": task.find('owner').findtext('name', default="Not available") if task.find('owner') is not None else "Not available",
+                    "status": task.findtext('status', default="Not available"),
+                    "progress": task.findtext('progress', default="Not available"),
+                    "report_count": task.findtext('report_count', default="Not available"),
+                    "last_report": {
+                        "id": task.find('last_report').find('report').attrib.get('id', 'Not available') if task.find('last_report') is not None and task.find('last_report').find('report') is not None else "Not available",
+                        "timestamp": task.find('last_report').find('report').findtext('timestamp', default="Not available") if task.find('last_report') is not None and task.find('last_report').find('report') is not None else "Not available",
+                        "scan_start": task.find('last_report').find('report').findtext('scan_start', default="Not available") if task.find('last_report') is not None and task.find('last_report').find('report') is not None else "Not available",
+                        "scan_end": task.find('last_report').find('report').findtext('scan_end', default="Not available") if task.find('last_report') is not None and task.find('last_report').find('report') is not None else "Not available",
+                    }
+                }
+
+                return task_info
+            except Exception as e:
+                raise ValueError(f"Failed to get task: {str(e)}")
+
+
 
     def get_task_status(self, task_id):
         with self._connect() as gmp:
@@ -320,9 +598,7 @@ class OpenVASScanner:
             status_text = response.attrib.get('status_text')
             status_elements = response.xpath('.//status/text()')
             progress = status_elements[0] if status_elements else "unknown"
-            # raw_xml = etree.tostring(response, pretty_print=True).decode()
-            # print("Raw XML Response:")
-            # print(raw_xml)
+            
             return {
                 "status": status,
                 "message": status_text,
@@ -674,3 +950,174 @@ class OpenVASScanner:
             except Exception as e:
                 # Handle unexpected exceptions
                 raise ValueError(f"Unexpected error: {str(e)}")
+
+    def create_alert(
+            self,
+            name: str,
+            condition: str,
+            event: str,
+            method: str,
+            *,
+            condition_data: Optional[dict[str, str]] = None,
+            event_data: Optional[dict[str, str]] = None,
+            method_data: Optional[dict[str, str]] = None,
+            filter_id: Optional[str] = None,
+            comment: Optional[str] = None
+        ) -> dict:
+        """
+        Create a new alert in OpenVAS using the GMP API.
+
+        Args:
+            name: The name of the alert.
+            condition: The condition that must be satisfied for the alert to occur.
+            event: The event that must happen for the alert to occur.
+            method: The method by which the user is alerted.
+            condition_data: A dictionary defining the condition data.
+            event_data: A dictionary defining the event data.
+            method_data: A dictionary defining the method data.
+            filter_id: The UUID of a filter to apply when executing the alert.
+            comment: An optional comment for the alert.
+
+        Returns:
+            A dictionary containing the response from OpenVAS.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            try:
+                response = gmp.create_alert(
+                    name=name,
+                    condition=condition,
+                    event=event,
+                    method=method,
+                    condition_data=condition_data,
+                    event_data=event_data,
+                    method_data=method_data,
+                    filter_id=filter_id,
+                    comment=comment
+                )
+                # Print the full response to understand its structure
+                # print("Full Report Response:")
+                # print(etree.tostring(response, pretty_print=True).decode())
+                return {
+                    "status": response.attrib.get('status'),
+                    "status_text": response.attrib.get('status_text'),
+                    "id": response.attrib.get('id')
+                }
+            except Exception as e:
+                raise ValueError(f"Failed to create alert: {str(e)}")
+
+    def get_alerts(self) -> dict:
+        """
+        Retrieve a list of alerts from OpenVAS using the GMP API.
+
+        Returns:
+            A dictionary containing the list of alerts and their details.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            try:
+                response = gmp.get_alerts() 
+                
+                # Debug print the full response
+                print("Full Response from get_alerts:")
+                print(response)
+
+                # Extract alert details from the response
+                alerts = []
+                for alert in response.xpath('//alert'):
+                    alert_data = {
+                        'id': alert.get('id'),
+                        'name': alert.findtext('name'),
+                        'condition': alert.findtext('condition'),
+                        'event': alert.findtext('event'),
+                        'method': alert.findtext('method'),
+                        'comment': alert.findtext('comment'),
+                        'creation_time': alert.findtext('creation_time'),
+                        'modification_time': alert.findtext('modification_time')
+                    }
+                    alerts.append(alert_data)
+
+                return {
+                    "status": response.attrib.get('status'),
+                    "status_text": response.attrib.get('status_text'),
+                    "alerts": alerts
+                }
+            except Exception as e:
+                raise ValueError(f"Failed to get alerts: {str(e)}")
+            
+
+    def modify_alert(
+            self,
+            alert_id: str,
+            name: Optional[str] = None,
+            condition: Optional[str] = None,
+            event: Optional[str] = None,
+            method: Optional[str] = None,
+            *,
+            condition_data: Optional[dict[str, str]] = None,
+            event_data: Optional[dict[str, str]] = None,
+            method_data: Optional[dict[str, str]] = None,
+            filter_id: Optional[str] = None,
+            comment: Optional[str] = None
+        ) -> dict:
+        """
+        Modify an existing alert in OpenVAS using the GMP API.
+
+        Args:
+            alert_id: The UUID of the alert to modify.
+            name: The new name for the alert.
+            condition: The new condition for the alert.
+            event: The new event for the alert.
+            method: The new method for the alert.
+            condition_data: Data defining the new condition.
+            event_data: Data defining the new event.
+            method_data: Data defining the new method.
+            filter_id: The new UUID of the filter to apply.
+            comment: The new comment for the alert.
+
+        Returns:
+            A dictionary containing the response from OpenVAS.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            try:
+                response = gmp.modify_alert(
+                    alert_id=alert_id,
+                    name=name,
+                    condition=condition,
+                    event=event,
+                    method=method,
+                    condition_data=condition_data,
+                    event_data=event_data,
+                    method_data=method_data,
+                    filter_id=filter_id,
+                    comment=comment
+                )
+                return {
+                    "status": response.attrib.get('status'),
+                    "status_text": response.attrib.get('status_text')
+                }
+            except Exception as e:
+                raise ValueError(f"Failed to modify alert: {str(e)}")
+
+    def delete_alert(self, alert_id: str) -> dict:
+        """
+        Delete an existing alert in OpenVAS using the GMP API.
+
+        Args:
+            alert_id: The UUID of the alert to delete.
+
+        Returns:
+            A dictionary containing the response from OpenVAS.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            try:
+                response = gmp.delete_alert(alert_id=alert_id)
+                return {
+                    "status": response.attrib.get('status'),
+                    "status_text": response.attrib.get('status_text')
+                }
+            except Exception as e:
+                raise ValueError(f"Failed to delete alert: {str(e)}")
+

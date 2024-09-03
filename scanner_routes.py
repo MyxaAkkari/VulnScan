@@ -17,6 +17,93 @@ def authenticate():
             # Return the detailed error message
             return jsonify({"error": str(e)}), 500
 
+
+
+
+@scanner_bp.route('/get_roles', methods=['GET'])
+def get_roles():
+    try:
+        roles = scanner.get_roles()
+        return jsonify(roles), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+
+@scanner_bp.route('/get_users', methods=['GET'])
+def get_users():
+    try:
+        users = scanner.get_users()
+        return jsonify(users), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@scanner_bp.route('/get_user/<user_id>', methods=['GET'])
+def get_user(user_id):
+    try:
+        # Call the method to get user details by ID
+        user = scanner.get_user(user_id=user_id)
+        return jsonify(user), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+
+
+
+@scanner_bp.route('/create_user', methods=['POST'])
+def create_user():
+    data = request.json
+    name = data.get('name')
+    password = data.get('password')
+    role_ids = data.get('role_ids', [])
+    
+    try:
+        result = scanner.create_user(name=name, password=password, role_ids=role_ids)
+        return jsonify(result), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@scanner_bp.route('/modify_user/<user_id>', methods=['PUT'])
+def modify_user(user_id):
+    data = request.json
+    new_username = data.get('name')
+    new_password = data.get('password')
+    new_roles = data.get('role_ids', [])
+    
+    try:
+        result = scanner.modify_user(user_id=user_id, new_username=new_username, new_password=new_password, role_ids=new_roles)
+        return jsonify(result), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+
+
+@scanner_bp.route('/delete_user/<user_id>', methods=['DELETE'])
+def delete_user(user_id):
+    try:
+        result = scanner.delete_user(user_id=user_id)
+        return jsonify(result), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+
+
+
+@scanner_bp.route('/clone_user/<user_id>', methods=['POST'])
+def clone_user(user_id):
+    # Retrieve JSON data from the request
+    data = request.json
+    
+    # Extract optional fields for modification
+    new_name = data.get('name', None)
+    new_comment = data.get('comment', None)
+    new_roles = data.get('roles', None)
+    
+    try:
+        # Call the clone_user method with optional parameters
+        result = scanner.clone_user(user_id=user_id, name=new_name, comment=new_comment, roles=new_roles)
+        return jsonify(result), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+
+
 @scanner_bp.route('/get_scanners', methods=['GET'])
 def get_scanners():
     try:
@@ -171,18 +258,16 @@ def create_task():
     config_id = data.get('config_id')
     scanner_id = data.get('scanner_id')
     schedule_id = data.get('schedule_id', None)
+    alert_ids = data.get('alert_ids', None)
     
     try:
-        task_id = scanner.create_task(name=name, target_id=target_id, config_id=config_id, scanner_id=scanner_id, schedule_id = schedule_id)
+        task_id = scanner.create_task(name=name, target_id=target_id, config_id=config_id, scanner_id=scanner_id, schedule_id = schedule_id, alert_ids= alert_ids)
         return jsonify({"task_id": task_id}), 201
     except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
-@scanner_bp.route('/start_task', methods=['POST'])
-def start_task():
-    data = request.json
-    task_id = data.get('task_id')
-    
+@scanner_bp.route('/start_task/<task_id>', methods=['POST'])
+def start_task(task_id):    
     try:
         response = scanner.start_task(task_id=task_id)
         return jsonify(response), 200
@@ -209,22 +294,33 @@ def modify_task(task_id):
     config_id = data.get('config_id')
     scanner_id = data.get('scanner_id')
     schedule_id = data.get('schedule_id')
+    alert_ids = data.get('alert_ids')
     
     try:
-        result = scanner.modify_task(task_id=task_id, name=name, config_id=config_id, scanner_id=scanner_id, schedule_id=schedule_id)
+        result = scanner.modify_task(task_id=task_id, name=name, config_id=config_id, scanner_id=scanner_id, schedule_id=schedule_id, alert_ids= alert_ids)
         return jsonify(result), 200
     except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
+@scanner_bp.route('/get_task/<task_id>', methods=['GET'])
+def get_task(task_id):
+    """
+    Endpoint to retrieve information about a specific task.
+    """
+    if not task_id:
+        return jsonify({"status": "error", "message": "task_id is required"}), 400
+
+    try:
+        response = scanner.get_task(task_id)
+        return jsonify(response), 200
+    except ValueError as e:
+        return jsonify({"status": "error", "message": str(e)}), 400
+    except Exception as e:
+        return jsonify({"status": "error", "message": "An unexpected error occurred"}), 500
 
 
-@scanner_bp.route('/get_task_status', methods=['POST'])
-def get_task_status():
-    data = request.json
-    if not data or 'task_id' not in data:
-        return jsonify({"error": "Missing or invalid 'task_id' in request body."}), 400
-
-    task_id = data.get('task_id')
+@scanner_bp.route('/get_task_status/<task_id>', methods=['GET'])
+def get_task_status(task_id):
 
     try:
         response = scanner.get_task_status(task_id=task_id)
@@ -421,3 +517,102 @@ def delete_schedule(schedule_id):
         return jsonify({"error": str(e)}), 400
 
 
+@scanner_bp.route('/create_alert', methods=['POST'])
+def create_alert():
+    try:
+        data = request.json
+        name = data.get('name')
+        condition = data.get('condition')
+        event = data.get('event')
+        method = data.get('method')
+        condition_data = data.get('condition_data', {})
+        event_data = data.get('event_data', {})
+        method_data = data.get('method_data', {})
+        filter_id = data.get('filter_id')
+        comment = data.get('comment')
+
+        # Create the alert using the OpenVAS scanner's method
+        alert_response = scanner.create_alert(
+            name=name,
+            condition=condition,
+            event=event,
+            method=method,
+            condition_data=condition_data,
+            event_data=event_data,
+            method_data=method_data,
+            filter_id=filter_id,
+            comment=comment
+        )
+
+        return jsonify({
+            "status": "success",
+            "message": "Alert created successfully.",
+            "alert_id": alert_response.get('id')
+        }), 201
+
+    except Exception as e:
+        return jsonify({
+            "status": "error",
+            "message": f"Failed to create alert: {str(e)}"
+        }), 500
+    
+
+@scanner_bp.route('/get_alerts', methods=['GET'])
+def get_alerts():
+    """
+    Endpoint to retrieve a list of alerts.
+    """
+    try:
+        alerts = scanner.get_alerts()
+        return jsonify(alerts), 200
+    except ValueError as e:
+        return jsonify({"status": "error", "message": str(e)}), 400
+    except Exception as e:
+        return jsonify({"status": "error", "message": "An unexpected error occurred"}), 500
+
+
+@scanner_bp.route('/modify_alert', methods=['POST'])
+def modify_alert():
+    """
+    Endpoint to modify an existing alert.
+    """
+    data = request.json
+    alert_id = data.get('alert_id')
+    if not alert_id:
+        return jsonify({"status": "error", "message": "alert_id is required"}), 400
+
+    try:
+        response = scanner.modify_alert(
+            alert_id=alert_id,
+            name=data.get('name'),
+            condition=data.get('condition'),
+            event=data.get('event'),
+            method=data.get('method'),
+            condition_data=data.get('condition_data'),
+            event_data=data.get('event_data'),
+            method_data=data.get('method_data'),
+            filter_id=data.get('filter_id'),
+            comment=data.get('comment')
+        )
+        return jsonify(response), 200
+    except ValueError as e:
+        return jsonify({"status": "error", "message": str(e)}), 400
+    except Exception as e:
+        return jsonify({"status": "error", "message": "An unexpected error occurred"}), 500
+
+
+@scanner_bp.route('/delete_alert/<alert_id>', methods=['DELETE'])
+def delete_alert(alert_id):
+    """
+    Endpoint to delete an alert.
+    """
+    if not alert_id:
+        return jsonify({"status": "error", "message": "alert_id is required"}), 400
+
+    try:
+        response = scanner.delete_alert(alert_id=alert_id)
+        return jsonify(response), 200
+    except ValueError as e:
+        return jsonify({"status": "error", "message": str(e)}), 400
+    except Exception as e:
+        return jsonify({"status": "error", "message": "An unexpected error occurred"}), 500
