@@ -24,28 +24,6 @@ class OpenVASScanner:
             gmp.authenticate(self.username, self.password)
             print("Authenticated successfully")
 
-    def create_target(self, name, hosts, port_range=None, port_list_id=None):
-        with self._connect() as gmp:
-            gmp.authenticate(self.username, self.password)
-            
-            # Create the target using the provided details
-            response = gmp.create_target(name=name, hosts=[hosts], port_range=port_range, port_list_id=port_list_id)
-            
-            # Extract target ID from the response
-            target_id_elements = response.xpath('@id')
-            if not target_id_elements:
-                # Check for detailed error information
-                status = response.attrib.get('status')
-                status_text = response.attrib.get('status_text')
-                if status and status_text:
-                    raise ValueError(f"Error {status}: {status_text}")
-                else:
-                    raise ValueError("Failed to retrieve target ID and no detailed error information available.")
-
-            target_id = target_id_elements[0]
-            return target_id
-
-
 
 
     def get_configs(self):
@@ -126,6 +104,111 @@ class OpenVASScanner:
             
             return portlist_data
 
+    def get_targets(self, filter_string='rows=-1'):
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            try:
+                # Retrieve targets with optional filtering
+                response = gmp.get_targets(filter_string=filter_string)
+                
+                # Parse the response to extract target data
+                targets = []
+                for target in response.xpath('//target'):
+                    target_data = {
+                        'id': target.get('id'),
+                        'name': target.findtext('name'),
+                        'comment': target.findtext('comment'),
+                        'hosts': target.findtext('hosts'),
+                        'exclude_hosts': target.findtext('exclude_hosts'),
+                        'port_list': target.findtext('port_list/name'),
+                        'creation_time': target.findtext('creation_time'),
+                        'modification_time': target.findtext('modification_time'),
+                    }
+                    targets.append(target_data)
+
+                return targets
+            
+            except Exception as e:
+                raise ValueError(f"Error retrieving targets: {str(e)}")
+
+
+
+
+    def create_target(self, name, hosts, port_range=None, port_list_id=None):
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            # Create the target using the provided details
+            response = gmp.create_target(name=name, hosts=[hosts], port_range=port_range, port_list_id=port_list_id)
+            
+            # Extract target ID from the response
+            target_id_elements = response.xpath('@id')
+            if not target_id_elements:
+                # Check for detailed error information
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                if status and status_text:
+                    raise ValueError(f"Error {status}: {status_text}")
+                else:
+                    raise ValueError("Failed to retrieve target ID and no detailed error information available.")
+
+            target_id = target_id_elements[0]
+            return target_id
+
+
+    def delete_target(self, target_id):
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            try:
+                # Attempt to delete the target
+                response = gmp.delete_target(target_id=target_id)
+                
+                # Check if the response contains the status
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                if status != '200':
+                    raise ValueError(f"Error {status}: {status_text}")
+
+                return {"message": "Target deleted successfully"}
+            
+            except Exception as e:
+                # Handle unexpected exceptions
+                status = response.attrib.get('status') if response.attrib else "unknown"
+                status_text = response.attrib.get('status_text') if response.attrib else str(e)
+                raise ValueError(f"Error {status}: {status_text}")
+
+    def modify_target(self, target_id, name=None, hosts=None, exclude_hosts=None, port_list_id=None, comment=None):
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            try:
+                # Attempt to modify the target with provided parameters
+                response = gmp.modify_target(
+                    target_id=target_id,
+                    name=name,
+                    hosts=hosts,
+                    exclude_hosts=exclude_hosts,
+                    port_list_id=port_list_id,
+                    comment=comment
+                )
+
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+
+                if status != '200':
+                    raise ValueError(f"Error {status}: {status_text}")
+
+                return {
+                    "message": "Target modified successfully",
+                    "status": status,
+                    "status_text": status_text
+                }
+
+            except Exception as e:
+                raise ValueError(f"Error modifying target: {str(e)}")
+
 
 
     def create_task(self, name, target_id, config_id, scanner_id, schedule_id=None):
@@ -154,12 +237,63 @@ class OpenVASScanner:
                 "status_text": status_text
             }
 
+    def delete_task(self, task_id):
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            try:
+                # Attempt to delete the task
+                response = gmp.delete_task(task_id=task_id)
+                
+                # Check the response status
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                
+                if status != '200':
+                    # If the status is not 200, raise a ValueError
+                    raise ValueError(f"Error {status}: {status_text}")
+                
+                return {
+                    "message": "Task deleted successfully",
+                    "status": status,
+                    "status_text": status_text
+                }
+            
+            except Exception as e:
+                # Handle unexpected exceptions
+                status = response.attrib.get('status') if response.attrib else "unknown"
+                status_text = response.attrib.get('status_text') if response.attrib else str(e)
+                raise ValueError(f"Error {status}: {status_text}")
+
+
+    def modify_task(self, task_id, name=None, config_id=None, scanner_id=None, schedule_id=None):
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            try:
+            
+                # Attempt to modify the task
+                response = gmp.modify_task(task_id=task_id, name=name, config_id=config_id, scanner_id=scanner_id, schedule_id=schedule_id)
+                
+                # Check if the response contains the updated task information
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                if status != '200':
+                    raise ValueError(f"Error {status}: {status_text}")
+
+                return {"message": "Task modified successfully"}
+            
+            except Exception as e:
+                # Handle unexpected exceptions
+                status = response.attrib.get('status') if response.attrib else "unknown"
+                status_text = response.attrib.get('status_text') if response.attrib else str(e)
+                raise ValueError(f"Error {status}: {status_text}")
 
 
     def get_tasks(self):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
-            response = gmp.get_tasks()
+            response = gmp.get_tasks(filter_string="rows=-1")
             if response.attrib.get('status') == '400':
                 status = response.attrib.get('status')
                 status_text = response.attrib.get('status_text')
@@ -199,7 +333,7 @@ class OpenVASScanner:
     def get_results(self, task_id):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
-            response = gmp.get_results(task_id=task_id)
+            response = gmp.get_results(task_id=task_id, filter_string="rows=-1")
             if response.attrib.get('status') == '400':
                 status = response.attrib.get('status')
                 status_text = response.attrib.get('status_text')
@@ -218,34 +352,61 @@ class OpenVASScanner:
             
             return result_list
 
-    def get_results(self, task_id):
+
+    def get_reports(self, filter_string='rows=-1'):
+        """
+        Retrieve a list of reports from OpenVAS using GMP.
+
+        :param filter_string: Optional filter string to customize the query.
+                            Default is 'rows=-1', which retrieves all reports.
+        :return: A list of reports, each represented as a dictionary.
+        """
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
-            response = gmp.get_results(task_id=task_id)
-            if response.attrib.get('status') == '400':
-                status = response.attrib.get('status')
-                status_text = response.attrib.get('status_text')
-                raise ValueError(f"Error {status}: {status_text}")
             
-            results = response.xpath('.//result')
-            result_list = []
-            for result in results:
-                result_entry = {
-                    "id": result.xpath('@id')[0] if result.xpath('@id') else "N/A",
-                    "name": result.xpath('name/text()')[0] if result.xpath('name/text()') else "N/A",
-                    "description": result.xpath('description/text()')[0] if result.xpath('description/text()') else "N/A",
-                    "severity": result.xpath('severity/text()')[0] if result.xpath('severity/text()') else "N/A"
+            # Fetch the list of reports
+            response = gmp.get_reports(filter_string=filter_string)
+            
+            # Print the full response to understand its structure (optional for debugging)
+            # print("Full Reports Response:")
+            # print(etree.tostring(response, pretty_print=True).decode())
+            
+            # Parse XML response
+            root = etree.fromstring(etree.tostring(response))
+            
+            # Extract report data
+            reports = []
+            for report_element in root.findall('.//report'):
+                report_id = report_element.get('id')
+                
+                # Extract task ID from the parent or related elements
+                task_id_element = report_element.find('.//task')
+                task_id = task_id_element.get('id') if task_id_element is not None else "N/A"
+                
+                report_data = {
+                    "id": report_id,
+                    "name": report_element.findtext('name', default=""),
+                    "creation_time": report_element.findtext('creation_time', default=""),
+                    "modification_time": report_element.findtext('modification_time', default=""),
+                    "scan_run_status": report_element.findtext('scan_run_status', default=""),
+                    "vulns_count": report_element.find('.//vulns/count').text if report_element.find('.//vulns/count') is not None else "0",
+                    "task_id": task_id
+                   
                 }
-                result_list.append(result_entry)
+                
+                # Append the report data to the list
+                reports.append(report_data)
             
-            return result_list
+            # Return the list of reports
+            return reports
+
 
     def get_report_by_id(self, report_id):
         with self._connect() as gmp:
             gmp.authenticate(self.username, self.password)
             
             # Fetch the specific report
-            response = gmp.get_report(report_id=report_id)
+            response = gmp.get_report(report_id=report_id, filter_string="rows=-1")
             
             # Print the full response to understand its structure
             # print("Full Report Response:")
@@ -361,6 +522,37 @@ class OpenVASScanner:
         return filename
     
 
+    def delete_report(self, report_id):
+        """
+        Delete a report by its ID from OpenVAS.
+
+        :param report_id: The ID of the report to delete.
+        :return: A message indicating the result of the deletion operation.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            try:
+                # Attempt to delete the report
+                response = gmp.delete_report(report_id=report_id)
+                
+                # Check the response status
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+                
+                if status != '200':
+                    # If the status is not 200, raise a ValueError
+                    raise ValueError(f"Error {status}: {status_text}")
+                
+                return {"message": "Report deleted successfully", "status": status, "status_text": status_text}
+            
+            except Exception as e:
+                # Handle unexpected exceptions
+                status = response.attrib.get('status') if response.attrib else "unknown"
+                status_text = response.attrib.get('status_text') if response.attrib else str(e)
+                raise ValueError(f"Error {status}: {status_text}")
+
+
     def create_schedule(self, name, icalendar_data, timezone='UTC', comment=None):
         """
         Create a new schedule in OpenVAS.
@@ -419,3 +611,66 @@ class OpenVASScanner:
                 schedules.append(schedule_data)
 
             return schedules
+
+    def modify_schedule(self, schedule_id, name=None, icalendar_data=None, timezone='UTC', comment=None):
+        """
+        Modify an existing schedule in OpenVAS.
+
+        :param schedule_id: The ID of the schedule to modify.
+        :param name: The new name of the schedule (optional).
+        :param icalendar_data: The new iCalendar data for the schedule (optional).
+        :param timezone: The new timezone for the schedule. Default is 'UTC'.
+        :param comment: Optional comment for the schedule.
+        :return: A message indicating the result of the modification.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+
+            try:
+                # Use GMP's modify_schedule method
+                response = gmp.modify_schedule(
+                    schedule_id=schedule_id,
+                    name=name,
+                    icalendar=icalendar_data,
+                    timezone=timezone,
+                    comment=comment
+                )
+
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+
+                if status == '200':
+                    return {"message": "Schedule modified successfully"}
+                else:
+                    raise ValueError(f"Error {status}: {status_text}")
+
+            except Exception as e:
+                raise ValueError(f"Unexpected error occurred: {str(e)}")
+
+    def delete_schedule(self, schedule_id):
+        """
+        Delete a schedule in OpenVAS.
+
+        :param schedule_id: The ID of the schedule to be deleted.
+        :return: A message indicating whether the deletion was successful.
+        """
+        with self._connect() as gmp:
+            gmp.authenticate(self.username, self.password)
+            
+            try:
+                # Attempt to delete the schedule
+                response = gmp.delete_schedule(schedule_id=schedule_id)
+
+                # Extract status and status_text
+                status = response.attrib.get('status')
+                status_text = response.attrib.get('status_text')
+
+                # Check if the operation was successful
+                if status != "200":
+                    raise ValueError(f"Error {status}: {status_text}")
+
+                return {"message": "Schedule deleted successfully"}
+
+            except Exception as e:
+                # Handle unexpected exceptions
+                raise ValueError(f"Unexpected error: {str(e)}")

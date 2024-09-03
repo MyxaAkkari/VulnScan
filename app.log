@@ -1494,3 +1494,694 @@ Connection: close
 2024-09-02 20:57:10,659 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
 ====================================================================================================
 
+2024-09-02 21:08:17,783 INFO: Request ID: e80b8582-5678-4912-81f5-59b5ed52657b [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:08:17,784 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:08:17,784 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:08:17,785 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:08:17,785 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:08:18,035 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:08:18,036 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:08:51,790 INFO: Request ID: 3edd2ca4-01a6-475e-9d9c-5e7007759b2d [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:08:51,790 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:08:51,791 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_task/5d295aaf-96cc-4f49-8656-2c773925a017 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:08:51,791 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:08:51,791 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:08:51,880 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:08:51,881 INFO: Response status: 400 BAD REQUEST [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:09:19,323 INFO: Request ID: 4c8d1f4e-91cb-43aa-a5ac-6b6699d3f3f2 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:09:19,323 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:09:19,323 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:09:19,324 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:09:19,324 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:09:19,558 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:09:19,559 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:09:35,857 INFO: Request ID: 0be6e052-af9f-4425-ac65-13a94649dcda [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:09:35,857 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:09:35,858 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_task/b10ecb67-0938-4c5c-ae86-469ec9b5d13a [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:09:35,858 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:09:35,858 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:09:35,959 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:09:35,959 INFO: Response status: 400 BAD REQUEST [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:09:42,792 INFO: Request ID: e18b3557-6d8c-43cd-a890-2e69874545d2 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:09:42,793 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:09:42,793 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:09:42,793 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:09:42,794 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:09:43,037 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:09:43,038 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:10:47,354 INFO: Request ID: c0b26039-cf08-4adf-b10d-8e74b5375603 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:10:47,355 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:10:47,355 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_task/bbd695fb-1493-4c9e-b3c2-052a0bde03c0 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:10:47,356 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:10:47,356 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:10:47,477 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:10:47,478 INFO: Response status: 400 BAD REQUEST [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:11:40,115 INFO: Request ID: f7517464-31ef-4f9a-b019-9182a809f9b0 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:11:40,116 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:11:40,116 INFO: Request: POST http://192.168.14.109:5000/scanner/create_task [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:11:40,117 INFO: Headers: Content-Length: 204
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:11:40,117 INFO: Body: b'{\n  "name": "Hourly Host Discovery2",\n  "target_id": "26f726bf-665e-4387-84d5-8ba0ff58a109",\n  "config_id": "2d3f051c-55ba-11e3-bf43-406186ea4fc5",\n  "scanner_id": "08b69003-5fc2-4037-a479-93b440211c73"\n}' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:11:40,238 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:11:40,239 INFO: Response status: 201 CREATED [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:12:25,015 INFO: Request ID: 68851313-f47c-4f0d-9c5f-08dbc32431f0 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:12:25,018 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:12:25,022 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_task/f49b5306-9b2f-43c2-a674-18929857148d [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:12:25,026 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:12:25,033 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:13:09,646 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:13:12,916 INFO: Response status: 400 BAD REQUEST [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:17:39,719 INFO: Request ID: b71c25d8-abde-4484-a763-0c8b1bbdcae9 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:17:39,720 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:17:39,723 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:17:39,725 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:17:39,727 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:17:39,914 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:17:39,916 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:17:44,483 INFO: Request ID: 2977f1f2-3680-4e4b-87b6-f2d2b9debed9 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:17:44,484 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:17:44,486 INFO: Request: POST http://192.168.14.109:5000/scanner/create_task [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:17:44,487 INFO: Headers: Content-Length: 204
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:17:44,490 INFO: Body: b'{\n  "name": "Hourly Host Discovery2",\n  "target_id": "26f726bf-665e-4387-84d5-8ba0ff58a109",\n  "config_id": "2d3f051c-55ba-11e3-bf43-406186ea4fc5",\n  "scanner_id": "08b69003-5fc2-4037-a479-93b440211c73"\n}' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:17:44,592 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:17:44,593 INFO: Response status: 201 CREATED [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:17:54,245 INFO: Request ID: 88a76f49-abd3-4a6e-b16c-3de74653ff9b [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:17:54,246 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:17:54,248 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_task/777d5b8c-51da-4018-a5a9-65047ae85634 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:17:54,249 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:17:54,253 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:18:13,821 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:18:14,991 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:22:49,927 INFO: Request ID: 42e34462-7d8e-4028-af0f-7a790e94d1ce [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:22:49,927 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:22:49,927 INFO: Request: POST http://192.168.14.109:5000/scanner/create_task [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:22:49,928 INFO: Headers: Content-Length: 204
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:22:49,928 INFO: Body: b'{\n  "name": "Hourly Host Discovery2",\n  "target_id": "26f726bf-665e-4387-84d5-8ba0ff58a109",\n  "config_id": "2d3f051c-55ba-11e3-bf43-406186ea4fc5",\n  "scanner_id": "08b69003-5fc2-4037-a479-93b440211c73"\n}' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:22:50,087 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:22:50,088 INFO: Response status: 201 CREATED [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:23:19,692 INFO: Request ID: 3c19a662-264d-4480-a38f-354c9a07cce4 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:23:19,692 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:23:19,693 INFO: Request: PUT http://192.168.14.109:5000/scanner/modify_task/38582de6-7657-4b63-ae01-31d98396c14a [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:23:19,693 INFO: Headers: Content-Length: 41
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:23:19,694 INFO: Body: b'{\n  "name": "Hourly Host Discovery2222"\n}' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:23:19,777 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:23:19,778 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:23:24,537 INFO: Request ID: feb1f575-5af9-46e1-937d-253b3e18e518 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:23:24,538 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:23:24,538 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:23:24,539 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:23:24,539 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:23:24,799 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:23:24,799 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:23:34,402 INFO: Request ID: da1c37dd-7730-4af1-9664-e3bdf0eec15a [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:23:34,402 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:23:34,403 INFO: Request: PUT http://192.168.14.109:5000/scanner/modify_task/38582de6-7657-4b6-ae01-31d98396c14a [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:23:34,403 INFO: Headers: Content-Length: 41
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:23:34,403 INFO: Body: b'{\n  "name": "Hourly Host Discovery2222"\n}' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:23:34,521 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:23:34,521 INFO: Response status: 500 INTERNAL SERVER ERROR [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-02 21:24:17,112 INFO: Request ID: e5288eb5-5091-4e19-b4b8-ec44df93391e [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-02 21:24:17,112 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-02 21:24:17,113 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_task/38582de6-7657-4b63-ae01-31d98396c14a [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-02 21:24:17,113 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-02 21:24:17,113 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-02 21:24:17,209 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-02 21:24:17,210 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:32:57,949 INFO: Request ID: 04dcbc5c-fc16-451c-8739-6e5525e43faf [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:32:57,949 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:32:57,950 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:32:57,950 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:32:57,951 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:32:57,951 ERROR: Exception occurred for Client IP 192.168.14.139: 'OpenVASScanner' object has no attribute 'get_targets' [in /home/kali/Desktop/vulunScan/logging_config.py:62]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/scanner_routes.py", line 45, in get_targets
+    targets = scanner.get_targets()
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'OpenVASScanner' object has no attribute 'get_targets'
+2024-09-03 11:32:57,953 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:32:57,953 INFO: Response status: 500 INTERNAL SERVER ERROR [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:36:45,941 INFO: Request ID: 4ab3d15f-5b12-4b47-bdf4-5986b60a618d [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:36:45,942 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:36:45,942 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:36:45,943 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:36:45,943 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:36:46,463 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:36:46,465 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:37:44,963 INFO: Request ID: 84871404-e171-4567-8040-d0440d49b75a [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:37:44,964 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:37:44,964 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_target/29b05a51-b692-4f2a-ac1e-2b84cca7cf83 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:37:44,965 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:37:44,965 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:37:45,057 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:37:45,057 INFO: Response status: 500 INTERNAL SERVER ERROR [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:38:19,238 INFO: Request ID: 2c0c88e1-8abb-4375-b6ad-739885225659 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:38:19,238 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:38:19,239 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_target/6b8bf3fb-674e-4d4b-8793-da7fd6b41ecb [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:38:19,239 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:38:19,239 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:38:19,325 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:38:19,326 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:40:08,635 INFO: Request ID: e0467b2c-1bfc-4b8b-b360-c5cf76dd23e7 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:40:08,635 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:40:08,636 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:40:08,636 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:40:08,637 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:40:09,121 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:40:09,122 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:41:02,244 INFO: Request ID: d4d39aa8-e1e4-4fb8-b1e1-62de6f2bf81d [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:41:02,244 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:41:02,245 INFO: Request: PUT http://192.168.14.109:5000/scanner/modify_target/29b05a51-b692-4f2a-ac1e-2b84cca7cf83 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:41:02,245 INFO: Headers: Content-Length: 28
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:41:02,246 INFO: Body: b'{\n  "name": "Myxa_Serever"\n}' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:41:02,246 ERROR: Exception occurred for Client IP 192.168.14.139: 405 Method Not Allowed: The method is not allowed for the requested URL. [in /home/kali/Desktop/vulunScan/logging_config.py:62]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise MethodNotAllowed(valid_methods=list(e.have_match_for)) from None
+werkzeug.exceptions.MethodNotAllowed: 405 Method Not Allowed: The method is not allowed for the requested URL.
+2024-09-03 11:41:02,248 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:41:02,248 INFO: Response status: 500 INTERNAL SERVER ERROR [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:41:11,197 INFO: Request ID: b60d7ac4-8d0c-49ee-a1eb-4d4e6670938b [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:41:11,197 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:41:11,198 INFO: Request: POST http://192.168.14.109:5000/scanner/modify_target/29b05a51-b692-4f2a-ac1e-2b84cca7cf83 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:41:11,198 INFO: Headers: Content-Length: 28
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:41:11,198 INFO: Body: b'{\n  "name": "Myxa_Serever"\n}' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:41:11,304 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:41:11,305 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:41:15,698 INFO: Request ID: 823f9ee9-911b-405a-bcdf-8baaaadbfc1e [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:41:15,699 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:41:15,699 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:41:15,700 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:41:15,700 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:41:16,184 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:41:16,185 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:52:32,251 INFO: Request ID: b91d3ee5-52e8-4531-8000-d5fdd8e1eb0e [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:52:32,252 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:52:32,252 INFO: Request: GET http://192.168.14.109:5000/scanner/get_schedules [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:52:32,253 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:52:32,253 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:52:32,364 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:52:32,364 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:53:31,777 INFO: Request ID: 8c36f577-b03b-4a23-8d23-b651bacd5a5a [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:53:31,777 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:53:31,778 INFO: Request: POST http://192.168.14.109:5000/scanner/create_schedule [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:53:31,778 INFO: Headers: Content-Length: 213
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:53:31,778 INFO: Body: b'{\n    "name": "Weekly Scan Schedule",\n    "dtstart": "2024-09-07T10:00:00",\n    "timezone": "UTC",\n    "comment": "This is a weekly scan schedule.",\n    "frequency": "weekly",\n    "interval": 1,\n    "count": 10\n}\n' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:53:31,887 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:53:31,888 INFO: Response status: 201 CREATED [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:53:40,065 INFO: Request ID: bb530dc7-a440-4135-a2c3-28be273585ff [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:53:40,066 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:53:40,066 INFO: Request: POST http://192.168.14.109:5000/scanner/create_schedule [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:53:40,067 INFO: Headers: Content-Length: 214
+Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Content-Type: application/json
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:53:40,067 INFO: Body: b'{\n    "name": "Weekly Scan Schedulee",\n    "dtstart": "2024-09-07T10:00:00",\n    "timezone": "UTC",\n    "comment": "This is a weekly scan schedule.",\n    "frequency": "weekly",\n    "interval": 1,\n    "count": 10\n}\n' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:53:40,154 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:53:40,155 INFO: Response status: 201 CREATED [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:53:57,488 INFO: Request ID: 31d01dcc-4d63-4ec5-ad23-5d73431f2d18 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:53:57,489 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:53:57,489 INFO: Request: GET http://192.168.14.109:5000/scanner/get_schedules [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:53:57,490 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:53:57,490 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:53:57,592 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:53:57,592 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:54:33,423 INFO: Request ID: 6c4c8909-c790-442b-b1f6-369b06904447 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:54:33,423 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:54:33,424 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_schedule/cce73f93-f1cc-4ee5-ae8e-b5acb70f5894 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:54:33,424 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:54:33,426 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:54:33,426 ERROR: Exception occurred for Client IP 192.168.14.139: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. [in /home/kali/Desktop/vulunScan/logging_config.py:62]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-09-03 11:54:33,434 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:54:33,435 INFO: Response status: 500 INTERNAL SERVER ERROR [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:54:49,136 INFO: Request ID: 0f2e7c8b-24a1-4915-9424-3a985e2a31dd [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:54:49,137 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:54:49,138 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_schedule/cce73f93-f1cc-4ee5-ae8e-b5acb70f5894 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:54:49,138 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:54:49,140 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:54:49,140 ERROR: Exception occurred for Client IP 192.168.14.139: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. [in /home/kali/Desktop/vulunScan/logging_config.py:62]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-09-03 11:54:49,144 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:54:49,144 INFO: Response status: 500 INTERNAL SERVER ERROR [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:55:06,032 INFO: Request ID: 46ed2aa8-d464-4bc0-aa48-73a36bd26942 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:55:06,033 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:55:06,033 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_schedule/cce73f93-f1cc-4ee5-ae8e-b5acb70f5894 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:55:06,034 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:55:06,036 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:55:06,036 ERROR: Exception occurred for Client IP 192.168.14.139: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. [in /home/kali/Desktop/vulunScan/logging_config.py:62]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-09-03 11:55:06,042 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:55:06,042 INFO: Response status: 500 INTERNAL SERVER ERROR [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:57:05,572 INFO: Request ID: b6dce1e9-6d29-4c0a-878c-3df1c9170ce7 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:57:05,572 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:57:05,572 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_schedule/cce73f93-f1cc-4ee5-ae8e-b5acb70f5894 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:57:05,573 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:57:05,573 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:57:05,657 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:57:05,658 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:57:08,797 INFO: Request ID: a6bc5ef1-9476-4e6c-8866-98924b4e5bb1 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:57:08,797 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:57:08,798 INFO: Request: GET http://192.168.14.109:5000/scanner/get_schedules [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:57:08,798 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:57:08,798 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:57:08,919 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:57:08,919 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 11:57:18,408 INFO: Request ID: dee68bc1-6e89-4325-8802-213f047b5791 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 11:57:18,409 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 11:57:18,410 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_schedule/fe09d3ce-48fd-430f-8b1d-d64e406597ee [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 11:57:18,411 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 11:57:18,411 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 11:57:18,531 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 11:57:18,532 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 12:28:23,430 INFO: Request ID: e89dbf00-9108-471d-a830-c235bdcba4d7 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 12:28:23,430 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 12:28:23,430 INFO: Request: GET http://192.168.14.109:5000/scanner/get_reports [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 12:28:23,431 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 12:28:23,431 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 12:28:23,431 ERROR: Exception occurred for Client IP 192.168.14.139: 'OpenVASScanner' object has no attribute 'get_reports' [in /home/kali/Desktop/vulunScan/logging_config.py:62]
+Traceback (most recent call last):
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/env/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/scanner_routes.py", line 264, in get_reports
+    reports = scanner.get_reports()
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'OpenVASScanner' object has no attribute 'get_reports'
+2024-09-03 12:28:23,433 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 12:28:23,433 INFO: Response status: 500 INTERNAL SERVER ERROR [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 12:31:53,255 INFO: Request ID: d7d11bf4-6c0e-48de-a296-fac5fbafb43c [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 12:31:53,256 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 12:31:53,257 INFO: Request: GET http://192.168.14.109:5000/scanner/get_reports [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 12:31:53,257 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 12:31:53,258 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 12:31:53,850 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 12:31:53,851 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 12:34:16,893 INFO: Request ID: 9538e47b-81d7-413f-9bf0-7534c429aab4 [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 12:34:16,894 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 12:34:16,894 INFO: Request: GET http://192.168.14.109:5000/scanner/get_reports [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 12:34:16,894 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 12:34:16,895 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 12:34:17,428 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 12:34:17,429 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 12:35:50,349 INFO: Request ID: 5ae0ee77-cddd-43f2-b86e-4f480bd8897b [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 12:35:50,349 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 12:35:50,350 INFO: Request: GET http://192.168.14.109:5000/scanner/get_reports [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 12:35:50,350 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 12:35:50,350 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 12:35:50,882 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 12:35:50,883 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+
+2024-09-03 12:36:17,620 INFO: Request ID: 7b968869-7bc2-4eb6-a66d-338a9a249f1e [in /home/kali/Desktop/vulunScan/logging_config.py:46]
+2024-09-03 12:36:17,620 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:47]
+2024-09-03 12:36:17,620 INFO: Request: DELETE http://192.168.14.109:5000/scanner/delete_report/1e996d39-c620-4c43-b34e-5b0ad3ee1523 [in /home/kali/Desktop/vulunScan/logging_config.py:48]
+2024-09-03 12:36:17,621 INFO: Headers: Accept-Encoding: gzip, deflate, br
+Accept: */*
+User-Agent: Thunder Client (https://www.thunderclient.com)
+Host: 192.168.14.109:5000
+Connection: close
+
+ [in /home/kali/Desktop/vulunScan/logging_config.py:49]
+2024-09-03 12:36:17,621 INFO: Body: b'' [in /home/kali/Desktop/vulunScan/logging_config.py:50]
+2024-09-03 12:36:17,731 INFO: Client IP: 192.168.14.139 [in /home/kali/Desktop/vulunScan/logging_config.py:55]
+2024-09-03 12:36:17,732 INFO: Response status: 200 OK [in /home/kali/Desktop/vulunScan/logging_config.py:56]
+====================================================================================================
+

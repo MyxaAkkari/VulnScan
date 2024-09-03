@@ -39,18 +39,6 @@ def get_configs():
     except ValueError as e:
         return jsonify({"error": str(e)}), 500
 
-@scanner_bp.route('/get_targets', methods=['GET'])
-def get_targets():
-    try:
-        targets = scanner.get_targets()
-        target_list = []
-        for target in targets:
-            target_id = target.xpath('@id')[0]
-            target_name = target.xpath('name/text()')[0]
-            target_list.append({"target_id": target_id, "target_name": target_name})
-        return jsonify(target_list), 200
-    except ValueError as e:
-        return jsonify({"error": str(e)}), 500
 
 
 @scanner_bp.route('/get_portlists', methods=['GET'])
@@ -110,6 +98,14 @@ def convert_hosts_to_targets():
     return jsonify({"created_targets": created_targets}), 201
 
 
+@scanner_bp.route('/get_targets', methods=['GET'])
+def get_targets():
+    try:
+        targets = scanner.get_targets()
+        return jsonify(targets), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 500
+
 
 
 @scanner_bp.route('/create_target', methods=['POST'])
@@ -128,9 +124,44 @@ def create_target():
         return jsonify({"target_id": target_id}), 201
     except ValueError as e:
         return jsonify({"error": str(e)}), 400
+
+
+@scanner_bp.route('/delete_target/<target_id>', methods=['DELETE'])
+def delete_target(target_id):
+    try:
+        result = scanner.delete_target(target_id=target_id)
+        return jsonify(result), 200
     except ValueError as e:
-        return jsonify({"error": "An unexpected error occurred."}), 500
-    
+        return jsonify({"error": str(e)}), 500
+
+
+@scanner_bp.route('/modify_target/<string:target_id>', methods=['POST'])
+def modify_target(target_id):
+    data = request.json
+    try:
+        # Extract parameters from the JSON request
+        name = data.get('name')
+        hosts = data.get('hosts')
+        exclude_hosts = data.get('exclude_hosts')
+        port_list_id = data.get('port_list_id')
+        comment = data.get('comment')
+
+        # Call the modify_target method with the extracted parameters
+        result = scanner.modify_target(
+            target_id=target_id,
+            name=name,
+            hosts=hosts,
+            exclude_hosts=exclude_hosts,
+            port_list_id=port_list_id,
+            comment=comment
+        )
+
+        return jsonify(result), 200
+
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 500
+
+
 
 @scanner_bp.route('/create_task', methods=['POST'])
 def create_task():
@@ -157,6 +188,35 @@ def start_task():
         return jsonify(response), 200
     except ValueError as e:
         return jsonify({"error": str(e)}), 500
+
+@scanner_bp.route('/delete_task/<task_id>', methods=['DELETE'])
+def delete_task(task_id):
+    try:
+        result = scanner.delete_task(task_id)
+        return jsonify(result), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+    except Exception as e:
+        # Handle unexpected errors
+        return jsonify({"error": "An unexpected error occurred", "details": str(e)}), 500
+
+
+
+@scanner_bp.route('/modify_task/<task_id>', methods=['PUT'])
+def modify_task(task_id):
+    data = request.json
+    name = data.get('name')
+    config_id = data.get('config_id')
+    scanner_id = data.get('scanner_id')
+    schedule_id = data.get('schedule_id')
+    
+    try:
+        result = scanner.modify_task(task_id=task_id, name=name, config_id=config_id, scanner_id=scanner_id, schedule_id=schedule_id)
+        return jsonify(result), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 500
+
+
 
 @scanner_bp.route('/get_task_status', methods=['POST'])
 def get_task_status():
@@ -214,6 +274,15 @@ def get_report(report_id):
         return jsonify(report_data), 404
     return jsonify(report_data), 200
 
+
+@scanner_bp.route('/delete_report/<report_id>', methods=['DELETE'])
+def delete_report(report_id):
+    try:
+        result = scanner.delete_report(report_id=report_id)
+        return jsonify(result), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+    
 
 @scanner_bp.route('/export_report/<report_id>/<format>', methods=['GET'])
 def export_report(report_id, format):
@@ -292,3 +361,63 @@ def create_schedule():
     )
 
     return jsonify({"schedule_id": schedule_id}), 201
+
+@scanner_bp.route('/modify_schedule', methods=['POST'])
+def modify_schedule():
+    data = request.json
+    schedule_id = data['schedule_id']
+    name = data['name']
+    dtstart = datetime.strptime(data['dtstart'], '%Y-%m-%dT%H:%M:%S')
+    timezone = data.get('timezone')
+    comment = data.get('comment')
+    frequency = data.get('frequency')  
+    interval = data.get('interval')  
+    count = data.get('count')  # Optional: number of occurrences
+
+    # Create the iCalendar data
+    cal = Calendar()
+    cal.add('prodid', '-//VulunScan//')
+    cal.add('version', '2.0')
+
+    event = Event()
+    event.add('dtstamp', datetime.now(tz=pytz.UTC))
+    event.add('dtstart', dtstart)
+
+    # Define recurrence rule based on frequency
+    rrule_params = {
+        'freq': frequency,
+        'interval': interval
+    }
+    if count:
+        rrule_params['count'] = count
+
+    event.add('rrule', rrule_params)
+
+    # Add the event to the calendar
+    cal.add_component(event)
+
+    # Convert the calendar to iCalendar format
+    icalendar_data = cal.to_ical().decode()
+
+    # Modify the schedule using the modified method
+    scanner.modify_schedule(
+        schedule_id=schedule_id,
+        name=name,
+        icalendar_data=icalendar_data,
+        timezone=timezone,
+        comment=comment
+    )
+
+    return jsonify({"message": "Schedule modified successfully"}), 200
+
+
+@scanner_bp.route('/delete_schedule/<schedule_id>', methods=['DELETE'])
+def delete_schedule(schedule_id):
+
+    try:
+        result = scanner.delete_schedule(schedule_id=schedule_id)
+        return jsonify(result), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+
+
