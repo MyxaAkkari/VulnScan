@@ -1,6 +1,6 @@
 from flask import jsonify, request, Blueprint, send_file
-from openvas import OpenVASScanner
-from config import Config
+from scanner.openvas import OpenVASScanner
+from config.config import Config
 from icalendar import Calendar, Event
 from datetime import datetime
 import pytz

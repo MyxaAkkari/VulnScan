@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, Column, String, Integer, ForeignKey, Table
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
-from config import Config
+from config.config import Config
 
 # Create the database engine
 engine = create_engine(Config.DATABASE_URL)

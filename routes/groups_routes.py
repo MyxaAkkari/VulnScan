@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from sqlalchemy.orm import Session
-from db import get_db, Group, Target
+from config.db import get_db, Group, Target
 
 groups_bp = Blueprint('groups', __name__)
 

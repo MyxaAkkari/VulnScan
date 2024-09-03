@@ -1,9 +1,9 @@
 from flask import Flask
-from scanner_routes import scanner_bp
-from groups_routes import groups_bp
-from db import init_db
-from config import Config
-from logging_config import setup_logging
+from routes.scanner_routes import scanner_bp
+from routes.groups_routes import groups_bp
+from config.db import init_db
+from config.config import Config
+from config.logging_config import setup_logging
 
 app = Flask(__name__)
 app.config.from_object(Config)
