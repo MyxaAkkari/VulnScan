@@ -1,14 +1,61 @@
 from flask import jsonify, request, Blueprint, send_file
 from scanner.openvas import OpenVASScanner
+from config.db import User, get_db, UserRole
 from config.config import Config
+from sqlalchemy.orm import Session
 from icalendar import Calendar, Event
 from datetime import datetime
 import pytz
+from functools import wraps
+from flask_jwt_extended import jwt_required, get_jwt_identity
 
 scanner_bp = Blueprint('scanner_bp', __name__)
 scanner = OpenVASScanner(socket_path = Config.OPENVAS_SOCKET_PATH, username = Config.OPENVAS_USERNAME, password = Config.OPENVAS_PASSWORD)
 
+
+def token_required(fn):
+    @wraps(fn)
+    @jwt_required()
+    def wrapper(*args, **kwargs):
+        # Access the database session
+        db: Session = next(get_db())
+        # Get the current user's ID from the token
+        current_user_id = get_jwt_identity()
+        # Retrieve the user from the database
+        current_user = db.query(User).filter_by(id=current_user_id).first()
+        
+        if not current_user:
+            return jsonify({"error": "User not found!"}), 403
+        
+        return fn( *args, **kwargs)
+    return wrapper
+
+def admin_required(fn):
+    @wraps(fn)
+    @jwt_required()
+    def wrapper(*args, **kwargs):
+        # Access the database session
+        db: Session = next(get_db())
+        # Get the current user's ID from the token
+        current_user_id = get_jwt_identity()
+        # Retrieve the user from the database
+        current_user = db.query(User).filter_by(id=current_user_id).first()
+
+        if not current_user:
+            return jsonify({"error": "User not found!"}), 403
+        
+        # Compare with UserRole.ADMIN correctly
+        if current_user.role != UserRole.ADMIN:
+            print(f"Access Denied: {current_user.role} does not match {UserRole.ADMIN}")
+            return jsonify({"error": "Admin access required"}), 403
+        
+        return fn(*args, **kwargs)
+    return wrapper
+
+
+
 @scanner_bp.route('/authenticate', methods=['POST'])
+@token_required
 def authenticate():
     try:
         scanner.authenticate()
@@ -18,9 +65,8 @@ def authenticate():
             return jsonify({"error": str(e)}), 500
 
 
-
-
 @scanner_bp.route('/get_roles', methods=['GET'])
+@token_required
 def get_roles():
     try:
         roles = scanner.get_roles()
@@ -29,6 +75,7 @@ def get_roles():
         return jsonify({"error": str(e)}), 400
 
 @scanner_bp.route('/get_users', methods=['GET'])
+@token_required
 def get_users():
     try:
         users = scanner.get_users()
@@ -38,6 +85,7 @@ def get_users():
 
 
 @scanner_bp.route('/get_user/<user_id>', methods=['GET'])
+@token_required
 def get_user(user_id):
     try:
         # Call the method to get user details by ID
@@ -49,6 +97,7 @@ def get_user(user_id):
 
 
 @scanner_bp.route('/create_user', methods=['POST'])
+@admin_required
 def create_user():
     data = request.json
     name = data.get('name')
@@ -63,6 +112,7 @@ def create_user():
 
 
 @scanner_bp.route('/modify_user/<user_id>', methods=['PUT'])
+@admin_required
 def modify_user(user_id):
     data = request.json
     new_username = data.get('name')
@@ -77,6 +127,7 @@ def modify_user(user_id):
 
 
 @scanner_bp.route('/delete_user/<user_id>', methods=['DELETE'])
+@admin_required
 def delete_user(user_id):
     try:
         result = scanner.delete_user(user_id=user_id)
@@ -87,6 +138,7 @@ def delete_user(user_id):
 
 
 @scanner_bp.route('/clone_user/<user_id>', methods=['POST'])
+@admin_required
 def clone_user(user_id):
     # Retrieve JSON data from the request
     data = request.json
@@ -105,6 +157,7 @@ def clone_user(user_id):
 
 
 @scanner_bp.route('/get_scanners', methods=['GET'])
+@token_required
 def get_scanners():
     try:
         scanners = scanner.get_scanners()
@@ -114,6 +167,7 @@ def get_scanners():
     
 
 @scanner_bp.route('/get_configs', methods=['GET'])
+@token_required
 def get_configs():
     try:
         configs = scanner.get_configs()
@@ -129,6 +183,7 @@ def get_configs():
 
 
 @scanner_bp.route('/get_portlists', methods=['GET'])
+@token_required
 def get_portlists():
     try:
         portlists = scanner.get_portlists()
@@ -138,6 +193,7 @@ def get_portlists():
 
 
 @scanner_bp.route('/get_hosts', methods=['GET'])
+@token_required
 def get_hosts():
     try:
         hosts = scanner.get_hosts()
@@ -147,6 +203,7 @@ def get_hosts():
 
 
 @scanner_bp.route('/convert_hosts_to_targets', methods=['POST'])
+@admin_required
 def convert_hosts_to_targets():
     data = request.json
     hosts = data.get('hosts', [])
@@ -186,6 +243,7 @@ def convert_hosts_to_targets():
 
 
 @scanner_bp.route('/get_targets', methods=['GET'])
+@token_required
 def get_targets():
     try:
         targets = scanner.get_targets()
@@ -196,6 +254,7 @@ def get_targets():
 
 
 @scanner_bp.route('/create_target', methods=['POST'])
+@admin_required
 def create_target():
     data = request.json
     name = data.get('name')
@@ -214,6 +273,7 @@ def create_target():
 
 
 @scanner_bp.route('/delete_target/<target_id>', methods=['DELETE'])
+@admin_required
 def delete_target(target_id):
     try:
         result = scanner.delete_target(target_id=target_id)
@@ -223,6 +283,7 @@ def delete_target(target_id):
 
 
 @scanner_bp.route('/modify_target/<string:target_id>', methods=['POST'])
+@admin_required
 def modify_target(target_id):
     data = request.json
     try:
@@ -251,6 +312,7 @@ def modify_target(target_id):
 
 
 @scanner_bp.route('/create_task', methods=['POST'])
+@admin_required
 def create_task():
     data = request.json
     name = data.get('name')
@@ -267,6 +329,7 @@ def create_task():
         return jsonify({"error": str(e)}), 500
 
 @scanner_bp.route('/start_task/<task_id>', methods=['POST'])
+@admin_required
 def start_task(task_id):    
     try:
         response = scanner.start_task(task_id=task_id)
@@ -275,6 +338,7 @@ def start_task(task_id):
         return jsonify({"error": str(e)}), 500
 
 @scanner_bp.route('/delete_task/<task_id>', methods=['DELETE'])
+@admin_required
 def delete_task(task_id):
     try:
         result = scanner.delete_task(task_id)
@@ -288,6 +352,7 @@ def delete_task(task_id):
 
 
 @scanner_bp.route('/modify_task/<task_id>', methods=['PUT'])
+@admin_required
 def modify_task(task_id):
     data = request.json
     name = data.get('name')
@@ -303,6 +368,7 @@ def modify_task(task_id):
         return jsonify({"error": str(e)}), 500
 
 @scanner_bp.route('/get_task/<task_id>', methods=['GET'])
+@token_required
 def get_task(task_id):
     """
     Endpoint to retrieve information about a specific task.
@@ -320,6 +386,7 @@ def get_task(task_id):
 
 
 @scanner_bp.route('/get_task_status/<task_id>', methods=['GET'])
+@token_required
 def get_task_status(task_id):
 
     try:
@@ -333,6 +400,7 @@ def get_task_status(task_id):
 
 
 @scanner_bp.route('/get_tasks', methods=['GET'])
+@token_required
 def get_tasks():
     try:
         tasks = scanner.get_tasks()
@@ -343,6 +411,7 @@ def get_tasks():
 
 
 @scanner_bp.route('/get_results', methods=['POST'])
+@token_required
 def get_results():
     data = request.json
     task_id = data.get('task_id')
@@ -355,6 +424,7 @@ def get_results():
 
 
 @scanner_bp.route('/get_reports', methods=['GET'])
+@token_required
 def get_reports():
     try:
         reports = scanner.get_reports()
@@ -364,6 +434,7 @@ def get_reports():
 
 
 @scanner_bp.route('/get_report/<report_id>', methods=['GET'])
+@token_required
 def get_report(report_id):
     report_data = scanner.get_report_by_id(report_id)
     if "error" in report_data:
@@ -372,6 +443,7 @@ def get_report(report_id):
 
 
 @scanner_bp.route('/delete_report/<report_id>', methods=['DELETE'])
+@admin_required
 def delete_report(report_id):
     try:
         result = scanner.delete_report(report_id=report_id)
@@ -381,6 +453,7 @@ def delete_report(report_id):
     
 
 @scanner_bp.route('/export_report/<report_id>/<format>', methods=['GET'])
+@token_required
 def export_report(report_id, format):
     try:
         report_data = scanner.get_report_by_id(report_id)
@@ -403,6 +476,7 @@ def export_report(report_id, format):
         return jsonify({"error": str(e)}), 500
 
 @scanner_bp.route('/get_schedules', methods=['GET'])
+@token_required
 def get_schedules():
     try:
         schedules = scanner.get_schedules()
@@ -413,6 +487,7 @@ def get_schedules():
 
 
 @scanner_bp.route('/create_schedule', methods=['POST'])
+@admin_required
 def create_schedule():
     data = request.json
     name = data['name']
@@ -459,6 +534,7 @@ def create_schedule():
     return jsonify({"schedule_id": schedule_id}), 201
 
 @scanner_bp.route('/modify_schedule', methods=['POST'])
+@admin_required
 def modify_schedule():
     data = request.json
     schedule_id = data['schedule_id']
@@ -508,6 +584,7 @@ def modify_schedule():
 
 
 @scanner_bp.route('/delete_schedule/<schedule_id>', methods=['DELETE'])
+@admin_required
 def delete_schedule(schedule_id):
 
     try:
@@ -518,6 +595,7 @@ def delete_schedule(schedule_id):
 
 
 @scanner_bp.route('/create_alert', methods=['POST'])
+@admin_required
 def create_alert():
     try:
         data = request.json
@@ -558,6 +636,7 @@ def create_alert():
     
 
 @scanner_bp.route('/get_alerts', methods=['GET'])
+@token_required
 def get_alerts():
     """
     Endpoint to retrieve a list of alerts.
@@ -572,6 +651,7 @@ def get_alerts():
 
 
 @scanner_bp.route('/modify_alert', methods=['POST'])
+@admin_required
 def modify_alert():
     """
     Endpoint to modify an existing alert.
@@ -602,6 +682,7 @@ def modify_alert():
 
 
 @scanner_bp.route('/delete_alert/<alert_id>', methods=['DELETE'])
+@admin_required
 def delete_alert(alert_id):
     """
     Endpoint to delete an alert.

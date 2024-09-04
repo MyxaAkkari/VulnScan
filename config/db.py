@@ -1,7 +1,9 @@
-from sqlalchemy import create_engine, Column, String, Integer, ForeignKey, Table
+from sqlalchemy import create_engine, Column, String, Integer, ForeignKey, Table, Enum
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from config.config import Config
+import enum
+from werkzeug.security import generate_password_hash, check_password_hash
 
 # Create the database engine
 engine = create_engine(Config.DATABASE_URL)
@@ -17,6 +19,30 @@ target_groups = Table('target_groups', Base.metadata,
     Column('target_id', Integer, ForeignKey('targets.id'), primary_key=True),
     Column('group_id', Integer, ForeignKey('groups.id'), primary_key=True)
 )
+
+# Define an Enum for user roles
+class UserRole(enum.Enum):
+    ADMIN = "admin"
+    USER = "user"
+
+# Define the User model
+class User(Base):
+    __tablename__ = 'users'
+
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String, nullable=False, unique=True, index=True)
+    email = Column(String, nullable=False, unique=True, index=True)
+    hashed_password = Column(String, nullable=False)
+    role = Column(Enum(UserRole), nullable=False)  # Restrict to 'admin' or 'user'
+    comment = Column(String)
+
+    # Method to set password
+    def set_password(self, password):
+        self.hashed_password = generate_password_hash(password)
+
+    # Method to check password
+    def check_password(self, password):
+        return check_password_hash(self.hashed_password, password)
 
 # Define the Target model
 class Target(Base):
