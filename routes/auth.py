@@ -57,7 +57,7 @@ def signup():
         role=role,  # Role is forced to 'user'
         comment=comment
     )
-    new_user.set_password(password)
+    new_user.set_password(str(password))
 
     # Add the user to the session and commit
     db.add(new_user)
@@ -105,15 +105,15 @@ def signin():
     data = request.json
 
     # Extract data
-    username = data.get('username')
+    email = data.get('email').lower()
     password = data.get('password')
 
     # Find the user by username
-    user = db.query(User).filter_by(username=username).first()
+    user = db.query(User).filter_by(email=email).first()
     
     # If the user does not exist or the password is incorrect, return an error
     if not user or not user.check_password(password):
-        return jsonify({"error": "Invalid username or password"}), 401
+        return jsonify({"error": "Invalid email or password"}), 401
 
     # Create the JWT access token
     access_token = create_access_token(identity=user.id)
@@ -190,3 +190,55 @@ def delete_user(user_id):
 
     return jsonify({"message": "User deleted successfully"}), 200
 
+@auth_bp.route('/get_user', methods=['GET'])
+@jwt_required()
+def get_user():
+    """
+    Retrieve information about the currently logged-in user.
+    """
+    db: Session = next(get_db())
+    
+    # Get the current user's ID from the JWT token
+    current_user_id = get_jwt_identity()
+
+    # Find the user in the database
+    user = db.query(User).filter_by(id=current_user_id).first()
+
+    if not user:
+        return jsonify({"error": "User not found"}), 404
+
+    # Return user details
+    return jsonify({
+        "id": user.id,
+        "username": user.username,
+        "email": user.email,
+        "role": user.role,
+        "comment": user.comment,
+        "created_at": user.created_at,
+        "updated_at": user.updated_at
+    }), 200
+
+
+@auth_bp.route('/get_users', methods=['GET'])
+@admin_required
+def get_users():
+    """
+    Retrieve information for all users. Admin access required.
+    """
+    db: Session = next(get_db())
+    
+    # Get all users from the database
+    users = db.query(User).all()
+
+    # Map users to a list of dictionaries with relevant info
+    users_info = [{
+        "id": user.id,
+        "username": user.username,
+        "email": user.email,
+        "role": user.role,
+        "comment": user.comment,
+        "created_at": user.created_at,
+        "updated_at": user.updated_at
+    } for user in users]
+
+    return jsonify(users_info), 200

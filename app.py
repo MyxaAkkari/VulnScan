@@ -7,7 +7,7 @@ from routes.AI import ai_bp
 from config.db import init_db
 from config.config import Config
 from config.logging_config import setup_logging
-
+from flask_cors import CORS
 app = Flask(__name__)
 app.config.from_object(Config)
 app.register_blueprint(scanner_bp, url_prefix='/scanner')
@@ -16,6 +16,7 @@ app.register_blueprint(ai_bp, url_prefix='/ai')
 app.register_blueprint(auth_bp, url_prefix= '/auth')
 jwt = JWTManager(app)
 setup_logging(app)
+CORS(app)
 
 
 # Initialize the database

@@ -8,6 +8,7 @@ charset-normalizer==3.3.2
 click==8.1.7
 cryptography==43.0.0
 Flask==3.0.3
+Flask-Cors==5.0.0
 Flask-JWT-Extended==4.6.0
 fpdf==1.7.2
 google-ai-generativelanguage==0.6.6
