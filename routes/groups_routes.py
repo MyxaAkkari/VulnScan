@@ -20,7 +20,7 @@ def token_required(fn):
         if not current_user:
             return jsonify({"error": "User not found!"}), 403
         
-        return fn( *args, **kwargs)
+        return fn(*args, **kwargs)
     return wrapper
 
 def admin_required(fn):
@@ -37,7 +37,7 @@ def admin_required(fn):
         if not current_user:
             return jsonify({"error": "User not found!"}), 403
         
-        # Compare with UserRole.ADMIN correctly
+        # Ensure the user has admin privileges
         if current_user.role != UserRole.ADMIN:
             print(f"Access Denied: {current_user.role} does not match {UserRole.ADMIN}")
             return jsonify({"error": "Admin access required"}), 403
@@ -48,10 +48,16 @@ def admin_required(fn):
 @groups_bp.route('/create_group', methods=['POST'])
 @admin_required
 def create_group():
+    """
+    Endpoint to create a new group.
+    Admin access is required.
+    """
     data = request.json
     group_name = data.get('group_name')
+    
     if not group_name:
         return jsonify({"error": "group_name is required"}), 400
+    
     db: Session = next(get_db())
     group = Group(name=group_name)
     db.add(group)
@@ -62,6 +68,10 @@ def create_group():
 @groups_bp.route('/get_groups', methods=['GET'])
 @token_required
 def get_groups():
+    """
+    Endpoint to retrieve all groups.
+    Any authenticated user can access this.
+    """
     db: Session = next(get_db())
     groups = db.query(Group).all()
     groups_data = [{"id": g.id, "name": g.name} for g in groups]
@@ -71,6 +81,10 @@ def get_groups():
 @groups_bp.route('/rename_group/<int:group_id>', methods=['PUT'])
 @admin_required
 def rename_group(group_id):
+    """
+    Endpoint to rename an existing group.
+    Admin access is required.
+    """
     data = request.json
     new_name = data.get('group_name')
     
@@ -91,6 +105,10 @@ def rename_group(group_id):
 @groups_bp.route('/delete_group/<int:group_id>', methods=['DELETE'])
 @admin_required
 def delete_group(group_id):
+    """
+    Endpoint to delete a group by its ID.
+    Admin access is required.
+    """
     db: Session = next(get_db())
     group = db.query(Group).filter(Group.id == group_id).first()
     
@@ -105,6 +123,10 @@ def delete_group(group_id):
 @groups_bp.route('/remove_from_group', methods=['POST'])
 @admin_required
 def remove_from_group():
+    """
+    Endpoint to remove a target from a group.
+    Admin access is required.
+    """
     data = request.json
     target_id = data.get('target_id')
     group_id = data.get('group_id')
@@ -118,15 +140,19 @@ def remove_from_group():
     if not target:
         return jsonify({"error": "Target not found in group"}), 404
     
+    # Remove the target from the group
     target.group_id = None
     db.commit()
 
     return jsonify({"message": "Target removed from group"}), 200
 
-
 @groups_bp.route('/add_target', methods=['POST'])
 @admin_required
 def add_target():
+    """
+    Endpoint to add a new target to a group.
+    Admin access is required.
+    """
     data = request.json
     name = data.get('name')
     ip_address = data.get('ip_address')
@@ -142,6 +168,10 @@ def add_target():
 @groups_bp.route('/get_group_targets/<int:group_id>', methods=['GET'])
 @token_required
 def get_group_targets(group_id):
+    """
+    Endpoint to retrieve all targets in a specific group.
+    Any authenticated user can access this.
+    """
     db: Session = next(get_db())
     targets = db.query(Target).filter(Target.group_id == group_id).all()
     targets_data = [{"id": t.id, "name": t.name, "ip_address": t.ip_address} for t in targets]
