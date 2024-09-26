@@ -1,0 +1,2426 @@
+2024-09-26 16:10:43,379 INFO: Request ID: 3374b1dc-f0a6-4e98-86a8-101a936fcee6
+2024-09-26 16:10:43,379 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:43,380 INFO: Request: OPTIONS http://192.168.14.109:5000/auth/signin
+2024-09-26 16:10:43,380 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: content-type
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: POST
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:43,381 INFO: Body: b''
+2024-09-26 16:10:43,381 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:43,382 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:43,396 INFO: Request ID: 63817921-be42-4b6d-bcc1-9fe0445b36cd
+2024-09-26 16:10:43,397 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:43,397 INFO: Request: POST http://192.168.14.109:5000/auth/signin
+2024-09-26 16:10:43,397 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Content-Type: application/json
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 49
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:43,397 INFO: Body: b'{"email":"admin@vulnscan.com","password":"admin"}'
+2024-09-26 16:10:43,583 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:43,584 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:43,912 INFO: Request ID: 040b1991-df4d-4a07-ae2d-c4371445de3b
+2024-09-26 16:10:43,912 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:43,913 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_reports_with_tasks
+2024-09-26 16:10:43,913 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:43,913 INFO: Body: b''
+2024-09-26 16:10:43,913 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:43,913 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:43,927 INFO: Request ID: 3389479c-ec9c-4b4a-a045-3b3f78c466f7
+2024-09-26 16:10:43,928 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:43,928 INFO: Request: GET http://192.168.14.109:5000/scanner/get_reports_with_tasks
+2024-09-26 16:10:43,928 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:43,928 INFO: Body: b''
+2024-09-26 16:10:53,124 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,124 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:53,267 INFO: Request ID: 44786c90-2c82-4211-9ee3-d0d9f856e6a7
+2024-09-26 16:10:53,268 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,268 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:10:53,268 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:53,269 INFO: Body: b''
+2024-09-26 16:10:53,269 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,269 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:53,283 INFO: Request ID: 18d46272-5ec6-4b66-9cb9-d14c771ec4ba
+2024-09-26 16:10:53,283 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,283 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:10:53,292 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:53,292 INFO: Body: b''
+2024-09-26 16:10:53,565 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,566 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:53,604 INFO: Request ID: 1289773d-ff23-4bf1-bfa9-84394212c013
+2024-09-26 16:10:53,604 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,605 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/9e0b42e7-e44d-429e-893b-5361a390915a
+2024-09-26 16:10:53,605 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:53,605 INFO: Body: b''
+2024-09-26 16:10:53,606 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,606 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:53,616 INFO: Request ID: 12fc8970-8b14-4f95-8a76-db84370c4318
+2024-09-26 16:10:53,617 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,617 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/9e0b42e7-e44d-429e-893b-5361a390915a
+2024-09-26 16:10:53,617 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:53,617 INFO: Body: b''
+2024-09-26 16:10:53,789 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,789 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:53,812 INFO: Request ID: 102fff73-b1b8-4253-880d-253f8cf8c866
+2024-09-26 16:10:53,812 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,812 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/804bf6f9-71b9-4946-953c-37b7c46b85d1
+2024-09-26 16:10:53,812 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:53,812 INFO: Body: b''
+2024-09-26 16:10:53,813 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,813 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:53,827 INFO: Request ID: a71f30f6-91cd-4c45-aa6d-02da2d1000fb
+2024-09-26 16:10:53,827 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,828 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/804bf6f9-71b9-4946-953c-37b7c46b85d1
+2024-09-26 16:10:53,828 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:53,828 INFO: Body: b''
+2024-09-26 16:10:53,992 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:53,992 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:54,025 INFO: Request ID: 80896393-9cfe-41eb-a831-62409cf34a10
+2024-09-26 16:10:54,025 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,026 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/3f6fd366-8a37-475f-bba6-cf76a94c067b
+2024-09-26 16:10:54,026 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:54,026 INFO: Body: b''
+2024-09-26 16:10:54,027 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,027 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:54,039 INFO: Request ID: 1479504c-d35c-4333-8c3c-78a6c437698a
+2024-09-26 16:10:54,039 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,039 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/3f6fd366-8a37-475f-bba6-cf76a94c067b
+2024-09-26 16:10:54,040 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:54,040 INFO: Body: b''
+2024-09-26 16:10:54,182 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,183 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:54,210 INFO: Request ID: 3899fc62-22f2-45b3-baf7-9e16bc28b8e7
+2024-09-26 16:10:54,210 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,210 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/5858008f-4023-426c-9cff-e162ba487acb
+2024-09-26 16:10:54,210 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:54,211 INFO: Body: b''
+2024-09-26 16:10:54,211 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,211 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:54,225 INFO: Request ID: 823102ed-63e4-48c9-8a4a-7c4ec0e724a7
+2024-09-26 16:10:54,226 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,227 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/5858008f-4023-426c-9cff-e162ba487acb
+2024-09-26 16:10:54,227 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:54,227 INFO: Body: b''
+2024-09-26 16:10:54,390 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,390 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:54,418 INFO: Request ID: b4de660f-d1d9-4799-8bf6-7cc4ecb2dd0d
+2024-09-26 16:10:54,418 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,419 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/ba21b76b-35fa-419a-96fc-31cfd034f5bc
+2024-09-26 16:10:54,419 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:54,419 INFO: Body: b''
+2024-09-26 16:10:54,420 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,420 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:54,438 INFO: Request ID: 15ecbe66-7bd8-4469-a5d8-391b91731220
+2024-09-26 16:10:54,438 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,439 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/ba21b76b-35fa-419a-96fc-31cfd034f5bc
+2024-09-26 16:10:54,439 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:54,439 INFO: Body: b''
+2024-09-26 16:10:54,586 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,587 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:54,611 INFO: Request ID: da7bdfd3-0db4-4a30-8349-2dbeb36c82b7
+2024-09-26 16:10:54,612 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,612 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/8befdcb7-e508-414e-a6c5-b66ee6d3dd21
+2024-09-26 16:10:54,612 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:54,613 INFO: Body: b''
+2024-09-26 16:10:54,613 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,613 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:54,630 INFO: Request ID: 256dd080-2e3f-4bac-8057-5f0bd82df915
+2024-09-26 16:10:54,630 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,631 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/8befdcb7-e508-414e-a6c5-b66ee6d3dd21
+2024-09-26 16:10:54,631 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:54,631 INFO: Body: b''
+2024-09-26 16:10:54,913 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,914 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:54,945 INFO: Request ID: f8c2e2bd-a0bf-4f74-8c36-749239440254
+2024-09-26 16:10:54,945 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,946 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/165b1fb3-f9dc-4c09-8381-f071fd401185
+2024-09-26 16:10:54,946 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:54,947 INFO: Body: b''
+2024-09-26 16:10:54,947 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,947 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:54,960 INFO: Request ID: 28f16be6-ef53-4f36-b234-a541309e5b7b
+2024-09-26 16:10:54,960 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:54,961 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/165b1fb3-f9dc-4c09-8381-f071fd401185
+2024-09-26 16:10:54,961 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:54,961 INFO: Body: b''
+2024-09-26 16:10:55,116 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:55,116 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:55,145 INFO: Request ID: 7459563f-76ec-497e-a5fa-0e87c4a1a15c
+2024-09-26 16:10:55,145 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:55,145 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/9cd8acf1-ac57-4166-96c4-220b42f0953b
+2024-09-26 16:10:55,146 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:55,146 INFO: Body: b''
+2024-09-26 16:10:55,147 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:55,147 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:55,161 INFO: Request ID: f7e38170-8cf2-4fe9-89c3-0cd2a3963ca1
+2024-09-26 16:10:55,162 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:55,162 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/9cd8acf1-ac57-4166-96c4-220b42f0953b
+2024-09-26 16:10:55,162 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:55,162 INFO: Body: b''
+2024-09-26 16:10:55,297 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:55,297 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:55,326 INFO: Request ID: a7744de3-0064-4d02-ab4d-0e2953f0a0a2
+2024-09-26 16:10:55,326 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:55,327 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/3d03d447-b2c6-4f6b-ab23-c45b07b6ac04
+2024-09-26 16:10:55,327 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:55,327 INFO: Body: b''
+2024-09-26 16:10:55,327 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:55,328 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:55,343 INFO: Request ID: 6e185e3a-e0a8-4458-9084-3e6a6bd13b2a
+2024-09-26 16:10:55,343 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:55,344 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/3d03d447-b2c6-4f6b-ab23-c45b07b6ac04
+2024-09-26 16:10:55,344 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:55,344 INFO: Body: b''
+2024-09-26 16:10:56,927 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:56,927 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:56,977 INFO: Request ID: 2f745292-2723-4706-8d66-5cc91ceb77cc
+2024-09-26 16:10:56,977 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:56,977 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/62da59ad-986d-4b1f-b004-481521959eb9
+2024-09-26 16:10:56,978 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:56,978 INFO: Body: b''
+2024-09-26 16:10:56,979 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:56,979 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:56,995 INFO: Request ID: 076a30d4-db85-4d01-9a50-f0abc56d7c60
+2024-09-26 16:10:56,996 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:56,998 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/62da59ad-986d-4b1f-b004-481521959eb9
+2024-09-26 16:10:56,998 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:56,998 INFO: Body: b''
+2024-09-26 16:10:58,677 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:58,677 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:58,816 INFO: Request ID: e690c580-7064-4f58-9293-936c9579f6dd
+2024-09-26 16:10:58,817 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:58,817 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/cad93e58-7bea-41b8-8e63-3a698ce235e0
+2024-09-26 16:10:58,817 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:58,818 INFO: Body: b''
+2024-09-26 16:10:58,818 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:58,818 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:58,840 INFO: Request ID: 4a015907-774c-4642-bbda-7c6ca348b908
+2024-09-26 16:10:58,840 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:58,840 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/cad93e58-7bea-41b8-8e63-3a698ce235e0
+2024-09-26 16:10:58,840 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:58,841 INFO: Body: b''
+2024-09-26 16:10:59,138 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:59,139 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:59,196 INFO: Request ID: d2c7a65d-bb55-4742-83c0-89b9281f9736
+2024-09-26 16:10:59,196 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:59,197 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/308a940b-0d0c-48bb-a87c-37e59ec01dec
+2024-09-26 16:10:59,197 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:59,198 INFO: Body: b''
+2024-09-26 16:10:59,199 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:59,199 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:59,215 INFO: Request ID: 48c289a6-d7b0-4ee4-abbe-5beb5d6e66a6
+2024-09-26 16:10:59,215 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:59,215 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/308a940b-0d0c-48bb-a87c-37e59ec01dec
+2024-09-26 16:10:59,216 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:59,216 INFO: Body: b''
+2024-09-26 16:10:59,396 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:59,397 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:59,428 INFO: Request ID: 9932f007-8a52-4d6b-83ba-500d13ab411b
+2024-09-26 16:10:59,428 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:59,429 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/7ae81da6-f19d-4b1c-af47-7613d4d83b69
+2024-09-26 16:10:59,429 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:59,430 INFO: Body: b''
+2024-09-26 16:10:59,431 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:59,431 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:10:59,448 INFO: Request ID: c3287c13-4bcc-45c6-ae48-5f1264ee7797
+2024-09-26 16:10:59,448 INFO: Client IP: 192.168.14.137
+2024-09-26 16:10:59,449 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/7ae81da6-f19d-4b1c-af47-7613d4d83b69
+2024-09-26 16:10:59,449 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:10:59,449 INFO: Body: b''
+2024-09-26 16:11:01,237 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,237 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:11:01,372 INFO: Request ID: e5d4bb1b-443d-4ce1-9130-5e885e9ba131
+2024-09-26 16:11:01,372 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,372 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/1006c1e1-dfdd-4673-b549-b09dee764728
+2024-09-26 16:11:01,373 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:11:01,373 INFO: Body: b''
+2024-09-26 16:11:01,374 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,374 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:11:01,388 INFO: Request ID: 29c06ac2-eb4e-4fc4-8c0b-b3fd21febc00
+2024-09-26 16:11:01,388 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,388 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/1006c1e1-dfdd-4673-b549-b09dee764728
+2024-09-26 16:11:01,388 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:11:01,388 INFO: Body: b''
+2024-09-26 16:11:01,588 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,589 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:11:01,617 INFO: Request ID: 80e0e6eb-7af3-42e4-992f-de0ed3490625
+2024-09-26 16:11:01,617 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,617 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/398c293d-6f8f-47d2-959c-d7130458ed07
+2024-09-26 16:11:01,618 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:11:01,618 INFO: Body: b''
+2024-09-26 16:11:01,618 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,618 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:11:01,634 INFO: Request ID: 303098e3-307a-4888-991b-3c21daf0308e
+2024-09-26 16:11:01,635 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,635 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/398c293d-6f8f-47d2-959c-d7130458ed07
+2024-09-26 16:11:01,635 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:11:01,635 INFO: Body: b''
+2024-09-26 16:11:01,902 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,902 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:11:01,936 INFO: Request ID: 0e7f8abc-1dd5-4245-813b-e3181bed84b8
+2024-09-26 16:11:01,937 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,937 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/9b2d980d-c3c7-4f30-a9e7-ac483f0c884d
+2024-09-26 16:11:01,938 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:11:01,939 INFO: Body: b''
+2024-09-26 16:11:01,939 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,940 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:11:01,958 INFO: Request ID: bdbc959a-3c65-45ca-90ba-d998a9fe06c9
+2024-09-26 16:11:01,958 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:01,958 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/9b2d980d-c3c7-4f30-a9e7-ac483f0c884d
+2024-09-26 16:11:01,958 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:11:01,958 INFO: Body: b''
+2024-09-26 16:11:02,119 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:02,120 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:11:02,140 INFO: Request ID: e7c822cc-4522-4edd-b1f4-a014906c3287
+2024-09-26 16:11:02,140 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:02,141 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/72dd8776-5dfb-4994-8bc4-90d0aedfe049
+2024-09-26 16:11:02,141 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:11:02,141 INFO: Body: b''
+2024-09-26 16:11:02,142 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:02,142 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:11:02,163 INFO: Request ID: bf0773fd-c967-4687-8a45-3fbbb1b433bc
+2024-09-26 16:11:02,163 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:02,164 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/72dd8776-5dfb-4994-8bc4-90d0aedfe049
+2024-09-26 16:11:02,164 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:11:02,164 INFO: Body: b''
+2024-09-26 16:11:02,348 INFO: Client IP: 192.168.14.137
+2024-09-26 16:11:02,349 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:08,906 INFO: Request ID: 7ab7f588-21d7-4270-83a6-fdb22c3b7560
+2024-09-26 16:12:08,907 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:08,907 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:12:08,907 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:08,907 INFO: Body: b''
+2024-09-26 16:12:08,907 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:08,908 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:08,929 INFO: Request ID: 59f532d5-1f32-478b-a885-6526582a0446
+2024-09-26 16:12:08,930 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:08,930 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:12:08,930 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:08,931 INFO: Body: b''
+2024-09-26 16:12:09,142 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,142 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:09,195 INFO: Request ID: d58e4a19-4e43-4c02-9628-4750772c208b
+2024-09-26 16:12:09,196 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,196 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:12:09,196 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:09,197 INFO: Body: b''
+2024-09-26 16:12:09,197 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,197 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:09,209 INFO: Request ID: 13b1ecd5-ac60-4f5e-876f-987a6d07200b
+2024-09-26 16:12:09,209 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,210 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:12:09,210 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:09,210 INFO: Body: b''
+2024-09-26 16:12:09,641 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,641 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:09,707 INFO: Request ID: ae2840f2-e3ec-4606-b827-0c97a81b4379
+2024-09-26 16:12:09,708 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,709 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_configs
+2024-09-26 16:12:09,709 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:09,709 INFO: Body: b''
+2024-09-26 16:12:09,710 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,710 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:09,723 INFO: Request ID: 059814ea-e6be-4a85-9792-717f8033f325
+2024-09-26 16:12:09,723 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,724 INFO: Request: GET http://192.168.14.109:5000/scanner/get_configs
+2024-09-26 16:12:09,724 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:09,724 INFO: Body: b''
+2024-09-26 16:12:09,818 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,818 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:09,868 INFO: Request ID: 80374688-9d62-46c3-9b5d-c6d892348d7e
+2024-09-26 16:12:09,869 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,869 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_scanners
+2024-09-26 16:12:09,869 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:09,869 INFO: Body: b''
+2024-09-26 16:12:09,870 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,870 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:09,884 INFO: Request ID: 700d6eca-0533-4d79-b368-65146b8d913b
+2024-09-26 16:12:09,884 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,884 INFO: Request: GET http://192.168.14.109:5000/scanner/get_scanners
+2024-09-26 16:12:09,884 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:09,885 INFO: Body: b''
+2024-09-26 16:12:09,991 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:09,991 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:10,041 INFO: Request ID: 2a24012b-97ff-42aa-9355-b2f1cbe72f60
+2024-09-26 16:12:10,042 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:10,042 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:12:10,043 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:10,043 INFO: Body: b''
+2024-09-26 16:12:10,044 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:10,044 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:10,056 INFO: Request ID: 9f055a58-0b4b-4624-be2b-a98aba6deb05
+2024-09-26 16:12:10,057 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:10,057 INFO: Request: GET http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:12:10,057 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:10,057 INFO: Body: b''
+2024-09-26 16:12:10,158 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:10,158 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:13,399 INFO: Request ID: 93f7d15a-eb91-4d53-81df-40864e52b8d3
+2024-09-26 16:12:13,399 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:13,399 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_task/b5d955c0-525d-4b21-9cac-8ec6f04e06ad
+2024-09-26 16:12:13,399 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:13,400 INFO: Body: b''
+2024-09-26 16:12:13,400 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:13,400 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:13,424 INFO: Request ID: 68693cd7-a939-4d59-b2a4-3b62a989c25d
+2024-09-26 16:12:13,424 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:13,425 INFO: Request: GET http://192.168.14.109:5000/scanner/get_task/b5d955c0-525d-4b21-9cac-8ec6f04e06ad
+2024-09-26 16:12:13,425 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:13,426 INFO: Body: b''
+2024-09-26 16:12:13,563 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:13,563 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:19,977 INFO: Request ID: c145cc7f-5cdb-45d8-9da5-7711b3eeae4f
+2024-09-26 16:12:19,977 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:19,977 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:12:19,977 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:19,977 INFO: Body: b''
+2024-09-26 16:12:19,978 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:19,978 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:19,994 INFO: Request ID: c090a77f-4250-4bfe-827a-ccaa14db425a
+2024-09-26 16:12:19,994 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:19,995 INFO: Request: GET http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:12:19,995 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:19,995 INFO: Body: b''
+2024-09-26 16:12:20,093 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:20,094 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:31,995 INFO: Request ID: 5d139328-cd13-453a-89ab-708ce833749e
+2024-09-26 16:12:31,996 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:31,996 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:12:31,997 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:31,997 INFO: Body: b''
+2024-09-26 16:12:31,998 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:31,998 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:32,013 INFO: Request ID: 9409b0a2-06e0-47bf-829c-639303a74162
+2024-09-26 16:12:32,014 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:32,014 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:12:32,014 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:32,014 INFO: Body: b''
+2024-09-26 16:12:32,438 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:32,438 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:32,505 INFO: Request ID: c66e5e4c-b513-42fd-8f68-7bf35666c63f
+2024-09-26 16:12:32,506 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:32,506 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_portlists
+2024-09-26 16:12:32,506 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:32,507 INFO: Body: b''
+2024-09-26 16:12:32,507 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:32,508 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:32,527 INFO: Request ID: 5a0cd3f0-7561-4cd0-9e0f-e18935123310
+2024-09-26 16:12:32,527 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:32,527 INFO: Request: GET http://192.168.14.109:5000/scanner/get_portlists
+2024-09-26 16:12:32,528 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:32,528 INFO: Body: b''
+2024-09-26 16:12:32,623 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:32,623 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:36,163 INFO: Request ID: de5b4b76-b2b9-4116-995d-dbd28bef3c97
+2024-09-26 16:12:36,163 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:36,164 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_hosts
+2024-09-26 16:12:36,164 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:36,164 INFO: Body: b''
+2024-09-26 16:12:36,164 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:36,165 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:36,182 INFO: Request ID: 8a81c92c-0c02-419f-a23f-92c79ef0cf5d
+2024-09-26 16:12:36,183 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:36,183 INFO: Request: GET http://192.168.14.109:5000/scanner/get_hosts
+2024-09-26 16:12:36,183 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:36,183 INFO: Body: b''
+2024-09-26 16:12:36,387 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:36,387 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:36,449 INFO: Request ID: 636c0c5b-b359-4a3f-a787-62dd87343691
+2024-09-26 16:12:36,449 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:36,449 INFO: Request: GET http://192.168.14.109:5000/scanner/get_portlists
+2024-09-26 16:12:36,450 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:36,450 INFO: Body: b''
+2024-09-26 16:12:36,544 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:36,544 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:52,508 INFO: Request ID: be244fd7-111a-4ff1-86a9-5c75c023ab23
+2024-09-26 16:12:52,508 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:52,508 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:12:52,508 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:52,509 INFO: Body: b''
+2024-09-26 16:12:52,509 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:52,509 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:52,523 INFO: Request ID: 5abf2ad7-1c7d-4499-b05f-66b5aa6c54c1
+2024-09-26 16:12:52,524 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:52,524 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:12:52,524 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:52,524 INFO: Body: b''
+2024-09-26 16:12:52,782 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:52,782 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:52,830 INFO: Request ID: 19a86e54-4907-43e9-b4e5-dc588dbba0d6
+2024-09-26 16:12:52,830 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:52,831 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:12:52,831 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:52,831 INFO: Body: b''
+2024-09-26 16:12:52,832 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:52,832 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:52,853 INFO: Request ID: 0597d752-6624-4a8a-a2dd-a0b873801da7
+2024-09-26 16:12:52,853 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:52,853 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:12:52,853 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:52,854 INFO: Body: b''
+2024-09-26 16:12:53,269 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,269 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:53,389 INFO: Request ID: 1c8b0a67-4247-4950-98c4-4e7e22af73eb
+2024-09-26 16:12:53,389 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,390 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_configs
+2024-09-26 16:12:53,390 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:53,390 INFO: Body: b''
+2024-09-26 16:12:53,390 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,390 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:53,403 INFO: Request ID: 1b6ecb16-63e6-45bc-9dd4-c8bd986d5103
+2024-09-26 16:12:53,403 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,405 INFO: Request: GET http://192.168.14.109:5000/scanner/get_configs
+2024-09-26 16:12:53,405 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:53,405 INFO: Body: b''
+2024-09-26 16:12:53,492 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,493 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:53,541 INFO: Request ID: eb79a11a-14fa-43a6-8714-ca0d446285bb
+2024-09-26 16:12:53,542 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,542 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_scanners
+2024-09-26 16:12:53,542 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:53,542 INFO: Body: b''
+2024-09-26 16:12:53,543 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,543 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:53,557 INFO: Request ID: 964d38b0-5db0-4b30-94d4-0c6edb2bb5f9
+2024-09-26 16:12:53,557 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,557 INFO: Request: GET http://192.168.14.109:5000/scanner/get_scanners
+2024-09-26 16:12:53,558 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:53,558 INFO: Body: b''
+2024-09-26 16:12:53,665 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,665 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:53,724 INFO: Request ID: dd1d2abc-ef86-47f1-b5d4-7824272643e6
+2024-09-26 16:12:53,725 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,725 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:12:53,725 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:53,725 INFO: Body: b''
+2024-09-26 16:12:53,726 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,726 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:12:53,743 INFO: Request ID: 765e9e96-4b97-4722-8860-75e216d37669
+2024-09-26 16:12:53,743 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,743 INFO: Request: GET http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:12:53,743 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:12:53,743 INFO: Body: b''
+2024-09-26 16:12:53,840 INFO: Client IP: 192.168.14.137
+2024-09-26 16:12:53,840 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:01,655 INFO: Request ID: f0b1b5e9-1a2d-426b-bd53-8d5490f0c091
+2024-09-26 16:13:01,655 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:01,656 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:13:01,656 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:01,656 INFO: Body: b''
+2024-09-26 16:13:01,656 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:01,656 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:01,674 INFO: Request ID: e6a0dd5e-3a78-415a-b0e8-8e29a991bad0
+2024-09-26 16:13:01,674 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:01,674 INFO: Request: GET http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:13:01,675 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:01,675 INFO: Body: b''
+2024-09-26 16:13:01,795 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:01,795 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:07,093 INFO: Request ID: 52dd36bd-1d3c-4688-84c5-d98e87fa55c9
+2024-09-26 16:13:07,093 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,093 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:13:07,094 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:07,094 INFO: Body: b''
+2024-09-26 16:13:07,094 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,094 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:07,107 INFO: Request ID: 39906fad-0611-433f-871a-5d6132451547
+2024-09-26 16:13:07,108 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,108 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:13:07,108 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:07,108 INFO: Body: b''
+2024-09-26 16:13:07,330 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,330 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:07,392 INFO: Request ID: 63e4d91e-cf81-4c57-a954-6fdb9a927c15
+2024-09-26 16:13:07,392 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,392 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:13:07,392 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:07,393 INFO: Body: b''
+2024-09-26 16:13:07,393 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,393 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:07,409 INFO: Request ID: eb3bdd73-d364-48c4-9c2d-aab3b74c7a81
+2024-09-26 16:13:07,409 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,409 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:13:07,410 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:07,410 INFO: Body: b''
+2024-09-26 16:13:07,832 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,833 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:07,934 INFO: Request ID: c91252b6-5b8b-409a-bbd3-3d0556128e30
+2024-09-26 16:13:07,934 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,934 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_configs
+2024-09-26 16:13:07,935 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:07,935 INFO: Body: b''
+2024-09-26 16:13:07,935 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,935 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:07,955 INFO: Request ID: 4cbe4427-d87f-477f-bc1c-97b8607ef43a
+2024-09-26 16:13:07,955 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:07,955 INFO: Request: GET http://192.168.14.109:5000/scanner/get_configs
+2024-09-26 16:13:07,955 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:07,955 INFO: Body: b''
+2024-09-26 16:13:08,040 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:08,040 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:08,083 INFO: Request ID: 27a7fc5d-1f3e-46e4-8e6a-ee2a650b7a09
+2024-09-26 16:13:08,083 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:08,083 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_scanners
+2024-09-26 16:13:08,084 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:08,084 INFO: Body: b''
+2024-09-26 16:13:08,085 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:08,087 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:08,102 INFO: Request ID: 177c76cf-fdaf-4e77-9ed4-78597f4e5796
+2024-09-26 16:13:08,102 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:08,102 INFO: Request: GET http://192.168.14.109:5000/scanner/get_scanners
+2024-09-26 16:13:08,103 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:08,103 INFO: Body: b''
+2024-09-26 16:13:08,202 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:08,203 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:08,251 INFO: Request ID: bd194368-937a-4b57-b01e-b4241ec96f57
+2024-09-26 16:13:08,251 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:08,254 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:13:08,255 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:08,255 INFO: Body: b''
+2024-09-26 16:13:08,255 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:08,255 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:13:08,275 INFO: Request ID: 2ede27e9-3e64-4791-b746-a945b7fb6df1
+2024-09-26 16:13:08,275 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:08,275 INFO: Request: GET http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:13:08,276 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:13:08,276 INFO: Body: b''
+2024-09-26 16:13:08,367 INFO: Client IP: 192.168.14.137
+2024-09-26 16:13:08,367 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:17:12,493 INFO: Request ID: fd1b9c5c-e6c3-4a73-9e3b-790f584dd19a
+2024-09-26 16:17:12,493 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:12,494 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:17:12,494 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:17:12,494 INFO: Body: b''
+2024-09-26 16:17:12,495 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:12,495 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:17:12,515 INFO: Request ID: bd256aba-637e-4e4c-8883-48a9ba723bc0
+2024-09-26 16:17:12,515 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:12,516 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:17:12,516 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:17:12,516 INFO: Body: b''
+2024-09-26 16:17:12,736 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:12,737 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:17:13,350 INFO: Request ID: e0fbd9e2-b34e-461a-a81a-50fdd32f004d
+2024-09-26 16:17:13,350 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:13,351 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:17:13,351 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:17:13,351 INFO: Body: b''
+2024-09-26 16:17:13,351 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:13,352 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:17:13,364 INFO: Request ID: 56bee4d6-8e02-4dab-a700-8bf86778bf20
+2024-09-26 16:17:13,365 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:13,365 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:17:13,365 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:17:13,365 INFO: Body: b''
+2024-09-26 16:17:13,731 INFO: Request ID: ad90ad1a-9226-4763-a795-a82c344251fb
+2024-09-26 16:17:13,732 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:13,732 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:17:13,732 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:17:13,732 INFO: Body: b''
+2024-09-26 16:17:13,810 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:13,810 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:17:13,811 ERROR: Exception occurred for Client IP 192.168.14.137: [Errno 9] Bad file descriptor
+Traceback (most recent call last):
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/flask_jwt_extended/view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/routes/scanner_routes.py", line 33, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/routes/scanner_routes.py", line 679, in get_tasks
+    tasks = scanner.get_tasks()
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/scanner/openvas.py", line 832, in get_tasks
+    gmp.authenticate(self.username, self.password)
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/protocols/gmp/_gmp224.py", line 172, in authenticate
+    response = self._send_command(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/protocols/_protocol.py", line 134, in _send_command
+    raise e
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/protocols/_protocol.py", line 129, in _send_command
+    received_data = self._read()
+                    ^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/protocols/_protocol.py", line 66, in _read
+    return self._connection.read()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/connections/_connection.py", line 101, in read
+    data = self._read()
+           ^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/connections/_connection.py", line 73, in _read
+    return self._socket.recv(BUF_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 9] Bad file descriptor
+2024-09-26 16:17:13,817 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:13,817 INFO: Response status: 500 INTERNAL SERVER ERROR
+====================================================================================================
+
+2024-09-26 16:17:13,902 INFO: Request ID: cee2ff8f-b112-4f83-85a1-921191938a8b
+2024-09-26 16:17:13,902 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:13,903 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_configs
+2024-09-26 16:17:13,903 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:17:13,904 INFO: Body: b''
+2024-09-26 16:17:13,905 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:13,905 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:17:13,922 INFO: Request ID: 3b24d473-57f2-4bff-87ff-957c88a6cd3f
+2024-09-26 16:17:13,922 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:13,923 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:17:13,923 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:17:13,924 INFO: Body: b''
+2024-09-26 16:17:13,935 INFO: Request ID: e9b783b9-92cb-41fa-983b-875fdb3bc772
+2024-09-26 16:17:13,936 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:13,937 INFO: Request: GET http://192.168.14.109:5000/scanner/get_configs
+2024-09-26 16:17:13,938 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:17:13,938 INFO: Body: b''
+2024-09-26 16:17:14,388 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:14,388 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:17:20,745 INFO: Request ID: edfd7f8e-530d-48b4-8cbb-1f2c8cfe0c7b
+2024-09-26 16:17:20,746 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:20,746 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_task/ad69b854-59c6-446d-b8dd-be4df8305689
+2024-09-26 16:17:20,746 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:17:20,746 INFO: Body: b''
+2024-09-26 16:17:20,747 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:20,747 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:17:20,758 INFO: Request ID: 9b509c33-9b78-4c26-b61f-0169c7ea6161
+2024-09-26 16:17:20,758 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:20,758 INFO: Request: GET http://192.168.14.109:5000/scanner/get_task/ad69b854-59c6-446d-b8dd-be4df8305689
+2024-09-26 16:17:20,758 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:17:20,758 INFO: Body: b''
+2024-09-26 16:17:20,885 INFO: Client IP: 192.168.14.137
+2024-09-26 16:17:20,886 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:18:13,999 ERROR: Exception occurred for Client IP 192.168.14.137: [Errno 9] Bad file descriptor
+Traceback (most recent call last):
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/flask_jwt_extended/view_decorators.py", line 170, in decorator
+    return current_app.ensure_sync(fn)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/routes/scanner_routes.py", line 33, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/routes/scanner_routes.py", line 231, in get_configs
+    configs = scanner.get_configs()  # Retrieve configurations from the OpenVAS
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/scanner/openvas.py", line 354, in get_configs
+    gmp.authenticate(self.username, self.password)
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/protocols/gmp/_gmp224.py", line 172, in authenticate
+    response = self._send_command(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/protocols/_protocol.py", line 134, in _send_command
+    raise e
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/protocols/_protocol.py", line 129, in _send_command
+    received_data = self._read()
+                    ^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/protocols/_protocol.py", line 66, in _read
+    return self._connection.read()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/connections/_connection.py", line 101, in read
+    data = self._read()
+           ^^^^^^^^^^^^
+  File "/home/kali/Desktop/vulunScan/backend/env/lib/python3.11/site-packages/gvm/connections/_connection.py", line 73, in _read
+    return self._socket.recv(BUF_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 9] Bad file descriptor
+2024-09-26 16:18:14,002 INFO: Client IP: 192.168.14.137
+2024-09-26 16:18:14,002 INFO: Response status: 500 INTERNAL SERVER ERROR
+====================================================================================================
+
+2024-09-26 16:18:14,045 INFO: Request ID: 90dbd994-d7db-49bb-ba53-dbe8ba3e90d3
+2024-09-26 16:18:14,045 INFO: Client IP: 192.168.14.137
+2024-09-26 16:18:14,045 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_scanners
+2024-09-26 16:18:14,046 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:18:14,046 INFO: Body: b''
+2024-09-26 16:18:14,046 INFO: Client IP: 192.168.14.137
+2024-09-26 16:18:14,047 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:18:14,061 INFO: Request ID: 95bafb08-f390-44b1-ae56-e1e372462c8e
+2024-09-26 16:18:14,061 INFO: Client IP: 192.168.14.137
+2024-09-26 16:18:14,062 INFO: Request: GET http://192.168.14.109:5000/scanner/get_scanners
+2024-09-26 16:18:14,062 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:18:14,063 INFO: Body: b''
+2024-09-26 16:18:14,191 INFO: Client IP: 192.168.14.137
+2024-09-26 16:18:14,191 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:18:14,318 INFO: Request ID: c3d0d6b2-eb6b-439a-97cd-8a449adb0235
+2024-09-26 16:18:14,318 INFO: Client IP: 192.168.14.137
+2024-09-26 16:18:14,319 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:18:14,319 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:18:14,319 INFO: Body: b''
+2024-09-26 16:18:14,320 INFO: Client IP: 192.168.14.137
+2024-09-26 16:18:14,320 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:18:14,338 INFO: Request ID: 06d3ec70-93dc-450f-8535-5c163daf8fab
+2024-09-26 16:18:14,338 INFO: Client IP: 192.168.14.137
+2024-09-26 16:18:14,338 INFO: Request: GET http://192.168.14.109:5000/scanner/get_schedules
+2024-09-26 16:18:14,338 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:18:14,338 INFO: Body: b''
+2024-09-26 16:18:14,448 INFO: Client IP: 192.168.14.137
+2024-09-26 16:18:14,449 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:19:29,992 INFO: Request ID: 32cc9976-8368-45c2-b224-6340273274b7
+2024-09-26 16:19:29,993 INFO: Client IP: 192.168.14.137
+2024-09-26 16:19:29,993 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:19:29,993 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:19:29,993 INFO: Body: b''
+2024-09-26 16:19:29,994 INFO: Client IP: 192.168.14.137
+2024-09-26 16:19:29,994 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:19:30,013 INFO: Request ID: e861cfad-a7aa-4f44-b470-bba8ced09b03
+2024-09-26 16:19:30,013 INFO: Client IP: 192.168.14.137
+2024-09-26 16:19:30,014 INFO: Request: GET http://192.168.14.109:5000/scanner/get_targets
+2024-09-26 16:19:30,014 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:19:30,014 INFO: Body: b''
+2024-09-26 16:19:30,453 INFO: Client IP: 192.168.14.137
+2024-09-26 16:19:30,454 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:19:30,512 INFO: Request ID: 2d7d6e42-9e50-4de6-a74a-5281aeaba967
+2024-09-26 16:19:30,512 INFO: Client IP: 192.168.14.137
+2024-09-26 16:19:30,512 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_portlists
+2024-09-26 16:19:30,512 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:19:30,513 INFO: Body: b''
+2024-09-26 16:19:30,513 INFO: Client IP: 192.168.14.137
+2024-09-26 16:19:30,513 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:19:30,529 INFO: Request ID: 3c0029be-c9fb-4d6d-afa9-238e334c55b5
+2024-09-26 16:19:30,533 INFO: Client IP: 192.168.14.137
+2024-09-26 16:19:30,534 INFO: Request: GET http://192.168.14.109:5000/scanner/get_portlists
+2024-09-26 16:19:30,534 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:19:30,535 INFO: Body: b''
+2024-09-26 16:19:30,625 INFO: Client IP: 192.168.14.137
+2024-09-26 16:19:30,626 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:20:46,123 INFO: Request ID: 4335bda0-c394-46b1-8a61-c47dc1b55d89
+2024-09-26 16:20:46,124 INFO: Client IP: 192.168.14.137
+2024-09-26 16:20:46,124 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_reports_with_tasks
+2024-09-26 16:20:46,124 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:20:46,124 INFO: Body: b''
+2024-09-26 16:20:46,125 INFO: Client IP: 192.168.14.137
+2024-09-26 16:20:46,125 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:20:46,143 INFO: Request ID: 214e77f1-19d1-4672-998c-2745f63aa437
+2024-09-26 16:20:46,143 INFO: Client IP: 192.168.14.137
+2024-09-26 16:20:46,143 INFO: Request: GET http://192.168.14.109:5000/scanner/get_reports_with_tasks
+2024-09-26 16:20:46,144 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:20:46,144 INFO: Body: b''
+2024-09-26 16:20:46,146 INFO: Client IP: 192.168.14.137
+2024-09-26 16:20:46,146 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:20:48,693 INFO: Request ID: 504110b8-be99-4f5c-8359-6ad741875a87
+2024-09-26 16:20:48,693 INFO: Client IP: 192.168.14.137
+2024-09-26 16:20:48,693 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_report/9e0b42e7-e44d-429e-893b-5361a390915a
+2024-09-26 16:20:48,693 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:20:48,693 INFO: Body: b''
+2024-09-26 16:20:48,694 INFO: Client IP: 192.168.14.137
+2024-09-26 16:20:48,694 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:20:48,715 INFO: Request ID: b62de542-6d84-4066-aabc-bf3e36fb258f
+2024-09-26 16:20:48,716 INFO: Client IP: 192.168.14.137
+2024-09-26 16:20:48,716 INFO: Request: GET http://192.168.14.109:5000/scanner/get_report/9e0b42e7-e44d-429e-893b-5361a390915a
+2024-09-26 16:20:48,716 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:20:48,717 INFO: Body: b''
+2024-09-26 16:20:48,874 INFO: Client IP: 192.168.14.137
+2024-09-26 16:20:48,875 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:21:20,967 INFO: Request ID: a6c03856-790c-42f5-aaed-8841f84cfc03
+2024-09-26 16:21:20,968 INFO: Client IP: 192.168.14.137
+2024-09-26 16:21:20,968 INFO: Request: OPTIONS http://192.168.14.109:5000/ai/analyze_cve
+2024-09-26 16:21:20,968 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization,content-type
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: POST
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:21:20,968 INFO: Body: b''
+2024-09-26 16:21:20,969 INFO: Client IP: 192.168.14.137
+2024-09-26 16:21:20,969 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:21:20,974 INFO: Request ID: ad92d4e1-ab5c-40c7-9ff5-5e222e5f9ecf
+2024-09-26 16:21:20,974 INFO: Client IP: 192.168.14.137
+2024-09-26 16:21:20,975 INFO: Request: OPTIONS http://192.168.14.109:5000/ai/analyze_cve
+2024-09-26 16:21:20,975 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization,content-type
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: POST
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:21:20,975 INFO: Body: b''
+2024-09-26 16:21:20,976 INFO: Client IP: 192.168.14.137
+2024-09-26 16:21:20,976 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:21:20,990 INFO: Request ID: eb0d11da-b59d-455c-b0ae-bf23fd688bda
+2024-09-26 16:21:20,991 INFO: Client IP: 192.168.14.137
+2024-09-26 16:21:20,991 INFO: Request: POST http://192.168.14.109:5000/ai/analyze_cve
+2024-09-26 16:21:20,991 INFO: Headers: Host: 192.168.14.109:5000
+Accept: application/json, text/plain, */*
+Origin: http://localhost:5173
+Content-Type: application/json
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Content-Length: 2275
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:21:20,992 INFO: Request ID: 342af282-25c7-4d2f-83a1-fbc623b6596b
+2024-09-26 16:21:20,992 INFO: Client IP: 192.168.14.137
+2024-09-26 16:21:20,993 INFO: Request: POST http://192.168.14.109:5000/ai/analyze_cve
+2024-09-26 16:21:20,993 INFO: Headers: Host: 192.168.14.109:5000
+Accept: application/json, text/plain, */*
+Origin: http://localhost:5173
+Content-Type: application/json
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Content-Length: 2275
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:21:20,994 INFO: Body: b'{"id":"9e0b42e7-e44d-429e-893b-5361a390915a","creation_time":"2024-08-18T16:34:28Z","task_name":"Full Network Scan","highest_severity":7.5,"results":[{"cve_numbers":["CVE-2022-41556"],"description":"The host carries the product: cpe:/a:lighttpd:lighttpd:1.4.59\\nIt is vulnerable according to: CVE-2022-41556.\\nThe product was found at: 8800/tcp.\\n\\nA resource leak in gw_backend.c in lighttpd 1.4.56 through 1.4.66 could lead to a denial of service (connection-slot exhaustion) after a large amount of anomalous TCP behavior by clients. It is related to RDHUP mishandling in certain HTTP/1.1 chunked situations. Use of mod_fastcgi is, for example, affected. This is fixed in 1.4.67.","host":"192.168.14.84","id":"cf5aa344-d95a-4caa-bf41-41d72bf4cb1b","port":"8800","severity":"7.5","threat":"High"},{"cve_numbers":["CVE-2022-22707"],"description":"The host carries the product: cpe:/a:lighttpd:lighttpd:1.4.59\\nIt is vulnerable according to: CVE-2022-22707.\\nThe product was found at: 8800/tcp.\\n\\nIn lighttpd 1.4.46 through 1.4.63, the mod_extforward_Forwarded function of the mod_extforward plugin has a stack-based buffer overflow (4 bytes representing -1), as demonstrated by remote denial of service (daemon crash) in a non-default configuration. The non-default configuration requires handling of the Forwarded header in a somewhat unusual manner. Also, a 32-bit system is much more likely to be affected than a 64-bit system.","host":"192.168.14.84","id":"e2d7245b-5db0-436b-83e0-9416afb9925d","port":"8800","severity":"5.9","threat":"Medium"},{"cve_numbers":["CVE-2007-3205"],"description":"The host carries the product: cpe:/a:php:php\\nIt is vulnerable according to: CVE-2007-3205.\\nThe product was found at: 8800/tcp.\\n\\nThe parse_str function in (1) PHP, (2) Hardened-PHP, and (3) Suhosin, when called without a second parameter, might allow remote attackers to overwrite arbitrary variables by specifying variable names and values in the string to be parsed.  NOTE: it is not clear whether this is a design limitation of the function or a bug in PHP, although it is likely to be regarded as a bug in Hardened-PHP and Suhosin.","host":"192.168.14.84","id":"0683ede5-60f4-4c3a-896f-c55f1dbe3f0c","port":"8800","severity":"5.0","threat":"Medium"}],"vulns_count":"3"}'
+2024-09-26 16:21:20,999 INFO: Body: b'{"id":"9e0b42e7-e44d-429e-893b-5361a390915a","creation_time":"2024-08-18T16:34:28Z","task_name":"Full Network Scan","highest_severity":7.5,"results":[{"cve_numbers":["CVE-2022-41556"],"description":"The host carries the product: cpe:/a:lighttpd:lighttpd:1.4.59\\nIt is vulnerable according to: CVE-2022-41556.\\nThe product was found at: 8800/tcp.\\n\\nA resource leak in gw_backend.c in lighttpd 1.4.56 through 1.4.66 could lead to a denial of service (connection-slot exhaustion) after a large amount of anomalous TCP behavior by clients. It is related to RDHUP mishandling in certain HTTP/1.1 chunked situations. Use of mod_fastcgi is, for example, affected. This is fixed in 1.4.67.","host":"192.168.14.84","id":"cf5aa344-d95a-4caa-bf41-41d72bf4cb1b","port":"8800","severity":"7.5","threat":"High"},{"cve_numbers":["CVE-2022-22707"],"description":"The host carries the product: cpe:/a:lighttpd:lighttpd:1.4.59\\nIt is vulnerable according to: CVE-2022-22707.\\nThe product was found at: 8800/tcp.\\n\\nIn lighttpd 1.4.46 through 1.4.63, the mod_extforward_Forwarded function of the mod_extforward plugin has a stack-based buffer overflow (4 bytes representing -1), as demonstrated by remote denial of service (daemon crash) in a non-default configuration. The non-default configuration requires handling of the Forwarded header in a somewhat unusual manner. Also, a 32-bit system is much more likely to be affected than a 64-bit system.","host":"192.168.14.84","id":"e2d7245b-5db0-436b-83e0-9416afb9925d","port":"8800","severity":"5.9","threat":"Medium"},{"cve_numbers":["CVE-2007-3205"],"description":"The host carries the product: cpe:/a:php:php\\nIt is vulnerable according to: CVE-2007-3205.\\nThe product was found at: 8800/tcp.\\n\\nThe parse_str function in (1) PHP, (2) Hardened-PHP, and (3) Suhosin, when called without a second parameter, might allow remote attackers to overwrite arbitrary variables by specifying variable names and values in the string to be parsed.  NOTE: it is not clear whether this is a design limitation of the function or a bug in PHP, although it is likely to be regarded as a bug in Hardened-PHP and Suhosin.","host":"192.168.14.84","id":"0683ede5-60f4-4c3a-896f-c55f1dbe3f0c","port":"8800","severity":"5.0","threat":"Medium"}],"vulns_count":"3"}'
+2024-09-26 16:21:33,338 INFO: Client IP: 192.168.14.137
+2024-09-26 16:21:33,338 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:21:34,176 INFO: Client IP: 192.168.14.137
+2024-09-26 16:21:34,176 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:22:02,124 INFO: Request ID: a0186512-330a-4164-bac4-d5b50c5ba4f8
+2024-09-26 16:22:02,124 INFO: Client IP: 192.168.14.137
+2024-09-26 16:22:02,124 INFO: Request: OPTIONS http://192.168.14.109:5000/scanner/get_reports_with_tasks
+2024-09-26 16:22:02,124 INFO: Headers: Host: 192.168.14.109:5000
+Access-Control-Request-Headers: authorization
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Access-Control-Request-Method: GET
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Content-Length: 0
+Accept: */*
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:22:02,124 INFO: Body: b''
+2024-09-26 16:22:02,125 INFO: Client IP: 192.168.14.137
+2024-09-26 16:22:02,125 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:22:02,148 INFO: Request ID: 3cb21dd5-e3f3-4bc2-b5ab-5f0c8d526b68
+2024-09-26 16:22:02,148 INFO: Client IP: 192.168.14.137
+2024-09-26 16:22:02,148 INFO: Request: GET http://192.168.14.109:5000/scanner/get_reports_with_tasks
+2024-09-26 16:22:02,148 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcyNzM2NzA0MywianRpIjoiMDE1YTFjYzItOGVmMS00ZDQwLTk2OWEtOGUyNGY2ZGNkMjgxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzI3MzY3MDQzLCJjc3JmIjoiYzE0MGNiYWEtMTNiNC00ZDliLWE1NjgtMzAwMjczODMyYzZiIiwiZXhwIjoxNzI3MzcwNjQzfQ.G6xTSoY_UITDxC-IkxxHqdaBBxNtcNGoC1a3fyX_Bu8
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:22:02,149 INFO: Body: b''
+2024-09-26 16:22:11,250 INFO: Client IP: 192.168.14.137
+2024-09-26 16:22:11,251 INFO: Response status: 200 OK
+====================================================================================================
+
+2024-09-26 16:22:11,365 INFO: Request ID: 151ef663-171f-473b-841f-a2a153c22ff3
+2024-09-26 16:22:11,365 INFO: Client IP: 192.168.14.137
+2024-09-26 16:22:11,365 INFO: Request: GET http://192.168.14.109:5000/scanner/get_tasks
+2024-09-26 16:22:11,365 INFO: Headers: Host: 192.168.14.109:5000
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+Accept: application/json, text/plain, */*
+Referer: http://localhost:5173/
+Origin: http://localhost:5173
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Priority: u=3, i
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+2024-09-26 16:22:11,365 INFO: Body: b''
+2024-09-26 16:22:11,366 INFO: Client IP: 192.168.14.137
+2024-09-26 16:22:11,366 INFO: Response status: 401 UNAUTHORIZED
+====================================================================================================
+

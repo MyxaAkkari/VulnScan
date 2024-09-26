@@ -399,7 +399,72 @@ const Tasks = () => {
           footer={null}
         >
           <Form form={form} layout="vertical" onFinish={handleAddOrModifyTask}>
-            {/* Existing form items... */}
+          <Form.Item
+              name="name"
+              label="Task Name"
+              rules={[
+                { required: true, message: "Please input the task name!" },
+              ]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+                name="target_id"
+                label="Target"
+                rules={[
+                    { required: true },
+                  ]}
+              >
+                <Select placeholder="Select a target">
+                  {(Array.isArray(targets) ? targets : []).map(target => (
+                    <Select.Option key={target.id} value={target.id}>
+                      {target.name}
+                    </Select.Option>
+                  ))}
+                </Select>
+              </Form.Item>
+              <Form.Item
+                name="config_id"
+                label="Scan type"
+                rules={[
+                    { required: true },
+                  ]}
+              >
+                <Select placeholder="Select a scan type">
+                  {(Array.isArray(configs) ? configs : []).map(config => (
+                    <Select.Option key={config.config_id} value={config.config_id}>
+                      {config.config_name}
+                    </Select.Option>
+                  ))}
+                </Select>
+              </Form.Item>
+              <Form.Item
+                name="scanner_id"
+                label="Scanner"
+                rules={[
+                    { required: true },
+                  ]}
+              >
+                <Select placeholder="Select scanner">
+                  {(Array.isArray(scanners) ? scanners : []).map(scanner => (
+                    <Select.Option key={scanner.id} value={scanner.id}>
+                      {scanner.name}
+                    </Select.Option>
+                  ))}
+                </Select>
+              </Form.Item>
+              <Form.Item
+                name="schedule_id"
+                label="Schedule (Optional)"
+              >
+                <Select placeholder="Select schedule">
+                  {(Array.isArray(schedules) ? schedules : []).map(schedule => (
+                    <Select.Option key={schedule.id} value={schedule.id}>
+                      {schedule.name}
+                    </Select.Option>
+                  ))}
+                </Select>
+              </Form.Item>
             <Form.Item></Form.Item>
             <Form.Item>
               <Button type="primary" htmlType="submit">
